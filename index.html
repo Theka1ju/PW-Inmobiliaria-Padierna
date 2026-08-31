@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Alquiladora GM | Catálogo Virtual de Renta para Eventos</title>
+    <title>Alquiladora Padierna GM | Catálogo Virtual de Renta para Eventos</title>
     <meta name="description"
         content="Catálogo de alquiler de carpas, lonas, mesas, sillas Tiffany, mantelería, cristalería y equipo para fiestas y eventos sociales.">
     <meta name="keywords"
@@ -31,8 +31,8 @@
     <header class="bg-blue-600 text-white sticky top-0 z-40 shadow-md">
         <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
 
-            <!-- Espacio compensador para centrar en pantallas grandes -->
-            <div class="hidden sm:block sm:w-36"></div>
+            <!-- Espacio compensador para alineación en pantallas grandes -->
+            <div class="hidden sm:block sm:w-44"></div>
 
             <!-- Identidad Centrada -->
             <div class="flex items-center justify-center gap-3 text-center">
@@ -48,7 +48,7 @@
             <!-- Botón WhatsApp Header -->
             <a href="https://wa.me/5215542721803?text=Hola,%20quiero%20cotizar%20un%20evento" target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold px-4 py-2 rounded-full text-xs sm:text-sm transition shadow-md sm:w-auto">
+                class="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold px-4 py-2 rounded-full text-xs sm:text-sm transition shadow-md w-full sm:w-auto">
                 <i class="fab fa-whatsapp text-base sm:text-lg"></i>
                 <span>Cotizar por WhatsApp</span>
             </a>
@@ -56,9 +56,8 @@
         </div>
     </header>
 
-    <!-- Hero Section con Logo Difuminado de Fondo -->
+    <!-- Hero Section con Marca de Agua Difuminada -->
     <section class="relative bg-blue-50 py-12 px-4 text-center border-b border-blue-100 overflow-hidden">
-        <!-- Marca de agua / Logo de fondo con desenfoque y opacidad -->
         <div class="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-10 pointer-events-none filter blur-[1px]"
             style="background-image: url('img/logo.png');"></div>
 
@@ -116,7 +115,7 @@
         class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4 backdrop-blur-xs">
         <div
             class="bg-white rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl relative flex flex-col max-h-[90vh]">
-            <!-- Botón Cerrar -->
+            <!-- Botón Cerrar Superior -->
             <button onclick="cerrarDetalle()"
                 class="absolute top-3 right-3 bg-black/50 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center z-10 transition">
                 &times;
@@ -156,15 +155,11 @@
                     </div>
                 </div>
 
-                <div class="mt-6 pt-4 border-t flex gap-3">
+                <div class="mt-6 pt-4 border-t">
                     <button onclick="cerrarDetalle()"
-                        class="py-2.5 px-4 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-xl font-bold text-sm transition w-1/3">
+                        class="w-full py-2.5 px-4 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-xl font-bold text-sm transition">
                         Cerrar
                     </button>
-                    <a id="modal-wa-btn" href="#" target="_blank" rel="noopener noreferrer"
-                        class="py-2.5 px-4 bg-green-500 hover:bg-green-600 text-white rounded-xl font-bold text-sm shadow-md transition flex items-center justify-center gap-2 flex-1 text-center">
-                        <i class="fab fa-whatsapp text-lg"></i> Cotizar este Artículo
-                    </a>
                 </div>
             </div>
         </div>
@@ -236,7 +231,7 @@
 
         <!-- Copyright -->
         <div class="max-w-6xl mx-auto px-4 pt-6 text-center text-xs text-blue-200">
-            <p>© 2026 Alquiladora GM. Todos los derechos reservados.</p>
+            <p>© 2026 Alquiladora Padierna GM. Todos los derechos reservados.</p>
         </div>
     </footer>
 

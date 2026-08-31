@@ -156,34 +156,23 @@ function renderCatalog() {
 
     grid.innerHTML = prodsFiltrados.map(prod => {
         const fotoPrincipal = (prod.fotos && prod.fotos.length > 0 && prod.fotos[0] !== "img/") ? prod.fotos[0] : "img/placeholder.jpg";
-        const waUrl = `https://wa.me/${PHONE_NUMBER}?text=Hola,%20me%20interesa%20cotizar:%20*${encodeURIComponent(prod.nombre)}*%20($${prod.precio}%20MXN)`;
 
         return `
-      <div class="bg-white rounded-xl shadow-xs border border-gray-100 overflow-hidden hover:shadow-md transition flex flex-col justify-between group">
-        <!-- Clic en la tarjeta abre el carrusel de detalle -->
-        <div onclick="abrirDetalle(${prod.id})" class="cursor-pointer">
-          <div class="relative overflow-hidden h-44">
-            <img src="${fotoPrincipal}" alt="${prod.nombre}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=300&q=80'">
-            <span class="absolute top-2 right-2 bg-blue-700/80 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">
-              ${prod.categoria}
+      <div onclick="abrirDetalle(${prod.id})" class="bg-white rounded-xl shadow-xs border border-gray-100 overflow-hidden hover:shadow-md transition cursor-pointer flex flex-col justify-between group">
+        <div class="relative overflow-hidden h-44">
+          <img src="${fotoPrincipal}" alt="${prod.nombre}" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" onerror="this.src='https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=300&q=80'">
+          <span class="absolute top-2 right-2 bg-blue-700/80 backdrop-blur-xs text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow">
+            ${prod.categoria}
+          </span>
+          ${prod.fotos && prod.fotos.length > 1 ? `
+            <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[10px] px-1.5 py-0.5 rounded-md flex items-center gap-1">
+              <i class="fas fa-images"></i> ${prod.fotos.length}
             </span>
-            ${prod.fotos && prod.fotos.length > 1 ? `
-              <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[10px] px-1.5 py-0.5 rounded-md flex items-center gap-1">
-                <i class="fas fa-images"></i> ${prod.fotos.length}
-              </span>
-            ` : ''}
-          </div>
-          <div class="p-3.5 pb-0">
-            <h4 class="font-bold text-gray-800 text-sm leading-tight hover:text-blue-600 transition">${prod.nombre}</h4>
-            <p class="text-blue-600 font-extrabold text-base mt-1">$${prod.precio.toLocaleString()} MXN</p>
-          </div>
+          ` : ''}
         </div>
-
-        <!-- Botón Cotizar Directo por WhatsApp -->
-        <div class="p-3.5 pt-2">
-          <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="w-full bg-green-50 hover:bg-green-600 hover:text-white text-green-700 font-bold py-2 rounded-lg transition flex items-center justify-center gap-1.5 text-xs shadow-xs">
-            <i class="fab fa-whatsapp text-sm"></i> Cotizar este Artículo
-          </a>
+        <div class="p-4 text-center">
+          <h4 class="font-bold text-gray-800 text-sm leading-tight group-hover:text-blue-600 transition">${prod.nombre}</h4>
+          <p class="text-blue-600 font-extrabold text-base mt-2">$${prod.precio.toLocaleString()} MXN</p>
         </div>
       </div>
     `;
@@ -202,10 +191,6 @@ function abrirDetalle(id) {
     document.getElementById("modal-title").textContent = prod.nombre;
     document.getElementById("modal-price").textContent = `$${prod.precio.toLocaleString()} MXN`;
     document.getElementById("modal-desc").textContent = prod.desc || "Consulta disponibilidad, medidas y flete por WhatsApp.";
-
-    // Configurar enlace directo de WhatsApp del modal
-    const waBtn = document.getElementById("modal-wa-btn");
-    waBtn.href = `https://wa.me/${PHONE_NUMBER}?text=Hola,%20me%20interesa%20cotizar:%20*${encodeURIComponent(prod.nombre)}*%20($${prod.precio}%20MXN)`;
 
     actualizarFotoCarrusel();
     document.getElementById("product-modal").classList.remove("hidden");
