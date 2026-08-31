@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alquiladora GM | Catálogo Virtual de Renta para Eventos</title>
+    <meta name="description"
+        content="Catálogo de alquiler de carpas, lonas, mesas, sillas Tiffany, mantelería, cristalería y equipo para fiestas y eventos sociales.">
+    <meta name="keywords"
+        content="alquiler de sillas, renta de mesas, renta de lonas, carpas para eventos, sillas tiffany, Alquiladora GM">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .scrollbar-none::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-none {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans min-h-screen flex flex-col justify-between">
+
+    <!-- Header Centrado con Botón de WhatsApp -->
+    <header class="bg-blue-600 text-white sticky top-0 z-40 shadow-md">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
+
+            <!-- Espacio compensador para centrar en pantallas grandes -->
+            <div class="hidden sm:block sm:w-36"></div>
+
+            <!-- Identidad Centrada -->
+            <div class="flex items-center justify-center gap-3 text-center">
+                <img src="img/logo.png" alt="Logo Alquiladora GM"
+                    class="h-10 w-10 sm:h-12 sm:w-12 object-contain bg-white rounded-full p-1 shadow-xs"
+                    onerror="this.style.display='none'">
+                <div class="text-center">
+                    <h1 class="text-xl sm:text-2xl font-bold leading-tight">Alquiladora GM</h1>
+                    <p class="text-[11px] sm:text-xs text-blue-100">Alquiler de mobiliario, lonas y equipo</p>
+                </div>
+            </div>
+
+            <!-- Botón WhatsApp Header -->
+            <a href="https://wa.me/5215542721803?text=Hola,%20quiero%20cotizar%20un%20evento" target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold px-4 py-2 rounded-full text-xs sm:text-sm transition shadow-md sm:w-auto">
+                <i class="fab fa-whatsapp text-base sm:text-lg"></i>
+                <span>Cotizar por WhatsApp</span>
+            </a>
+
+        </div>
+    </header>
+
+    <!-- Hero Section con Logo Difuminado de Fondo -->
+    <section class="relative bg-blue-50 py-12 px-4 text-center border-b border-blue-100 overflow-hidden">
+        <!-- Marca de agua / Logo de fondo con desenfoque y opacidad -->
+        <div class="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-10 pointer-events-none filter blur-[1px]"
+            style="background-image: url('img/logo.png');"></div>
+
+        <div class="relative z-10 max-w-2xl mx-auto text-center">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-blue-900 mb-2">Catálogo de Alquiler para Eventos</h2>
+            <p class="text-gray-600 text-sm md:text-base leading-relaxed">
+                Explora nuestro mobiliario, lonas y cristalería. Haz clic en cualquier artículo para ver más detalles y
+                fotos en grande, o cotiza de inmediato por WhatsApp.
+            </p>
+        </div>
+    </section>
+
+    <!-- Catálogo y Filtros Centrados -->
+    <main class="max-w-6xl mx-auto px-4 py-8 flex-1 w-full text-center">
+        <div class="flex flex-col items-center justify-center gap-4 mb-8 border-b pb-6">
+            <div class="text-center">
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-800">Nuestros Productos</h3>
+                <p class="text-xs sm:text-sm text-gray-500 mt-1">Selecciona una categoría para filtrar</p>
+            </div>
+
+            <!-- Barra de Filtros Centrada -->
+            <div class="flex flex-wrap justify-center gap-2 max-w-full overflow-x-auto pb-2 scrollbar-none"
+                id="category-filters">
+                <button onclick="filtrarCategoria('Todos')"
+                    class="cat-btn active bg-blue-600 text-white px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap shadow-sm">Todos</button>
+                <button onclick="filtrarCategoria('Mesas y Juegos')"
+                    class="cat-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-300 transition">Mesas
+                    y Juegos</button>
+                <button onclick="filtrarCategoria('Lonas y Carpas')"
+                    class="cat-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-300 transition">Lonas
+                    y Carpas</button>
+                <button onclick="filtrarCategoria('Sillas')"
+                    class="cat-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-300 transition">Sillas</button>
+                <button onclick="filtrarCategoria('Mantelería')"
+                    class="cat-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-300 transition">Mantelería</button>
+                <button onclick="filtrarCategoria('Cristalería')"
+                    class="cat-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-300 transition">Cristalería</button>
+                <button onclick="filtrarCategoria('Equipo y Servicios')"
+                    class="cat-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-300 transition">Equipo
+                    & Servicios</button>
+                <button onclick="filtrarCategoria('Pisos y Pistas')"
+                    class="cat-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-300 transition">Pisos
+                    y Pistas</button>
+            </div>
+        </div>
+
+        <!-- Rejilla de Productos -->
+        <div id="catalog-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Cargado dinámicamente con JavaScript -->
+        </div>
+    </main>
+
+    <!-- MODAL: Previsualización y Carrusel de Fotos -->
+    <div id="product-modal"
+        class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4 backdrop-blur-xs">
+        <div
+            class="bg-white rounded-2xl max-w-lg w-full overflow-hidden shadow-2xl relative flex flex-col max-h-[90vh]">
+            <!-- Botón Cerrar -->
+            <button onclick="cerrarDetalle()"
+                class="absolute top-3 right-3 bg-black/50 hover:bg-black/70 text-white w-8 h-8 rounded-full flex items-center justify-center z-10 transition">
+                &times;
+            </button>
+
+            <!-- Carrusel de Imágenes -->
+            <div class="relative w-full h-64 bg-gray-900 select-none">
+                <img id="carousel-img" src="" alt="" class="w-full h-full object-cover">
+
+                <button id="carousel-prev" onclick="cambiarFotoCarrusel(-1)"
+                    class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/80 text-white w-8 h-8 rounded-full flex items-center justify-center transition">
+                    <i class="fas fa-chevron-left text-xs"></i>
+                </button>
+                <button id="carousel-next" onclick="cambiarFotoCarrusel(1)"
+                    class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/80 text-white w-8 h-8 rounded-full flex items-center justify-center transition">
+                    <i class="fas fa-chevron-right text-xs"></i>
+                </button>
+
+                <div id="carousel-counter"
+                    class="absolute bottom-2 right-3 bg-black/60 text-white text-[11px] font-bold px-2 py-0.5 rounded-full">
+                    1 / 1
+                </div>
+            </div>
+
+            <!-- Contenido Detallado Centrado -->
+            <div class="p-5 overflow-y-auto flex-1 flex flex-col justify-between text-center">
+                <div>
+                    <span id="modal-cat"
+                        class="text-xs font-bold text-blue-600 uppercase tracking-wide">Categoría</span>
+                    <h3 id="modal-title" class="text-xl font-extrabold text-gray-900 mt-1">Nombre del Producto</h3>
+                    <p id="modal-price" class="text-2xl font-black text-blue-600 mt-2">$0.00 MXN</p>
+
+                    <div class="mt-4 border-t pt-3 text-center">
+                        <h4 class="text-xs font-bold text-gray-400 uppercase">Detalles y Especificaciones</h4>
+                        <p id="modal-desc" class="text-sm text-gray-600 mt-1 leading-relaxed">Descripción del artículo.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-6 pt-4 border-t flex gap-3">
+                    <button onclick="cerrarDetalle()"
+                        class="py-2.5 px-4 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-xl font-bold text-sm transition w-1/3">
+                        Cerrar
+                    </button>
+                    <a id="modal-wa-btn" href="#" target="_blank" rel="noopener noreferrer"
+                        class="py-2.5 px-4 bg-green-500 hover:bg-green-600 text-white rounded-xl font-bold text-sm shadow-md transition flex items-center justify-center gap-2 flex-1 text-center">
+                        <i class="fab fa-whatsapp text-lg"></i> Cotizar este Artículo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-blue-600 text-white mt-16 pt-12 pb-8 border-t border-blue-700 shadow-inner">
+        <div
+            class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-blue-500/50 text-center md:text-left">
+
+            <!-- Columna 1: Identidad -->
+            <div class="flex flex-col items-center md:items-start">
+                <div class="flex items-center gap-3 mb-3">
+                    <img src="img/logo.png" alt="Logo Alquiladora GM"
+                        class="h-10 w-10 object-contain bg-white rounded-full p-1 shadow-xs"
+                        onerror="this.style.display='none'">
+                    <h3 class="text-xl font-bold">Alquiladora GM</h3>
+                </div>
+                <p class="text-blue-100 text-xs sm:text-sm leading-relaxed">
+                    Renta de carpas, lonas, mesas, sillas, mantelería, cristalería y equipo para todo tipo de fiestas y
+                    eventos sociales.
+                </p>
+            </div>
+
+            <!-- Columna 2: Contacto WhatsApp Directo -->
+            <div class="flex flex-col items-center md:items-start">
+                <h4 class="text-base font-bold mb-3 flex items-center gap-2">
+                    <i class="fab fa-whatsapp text-green-400 text-lg"></i> Atención Inmediata
+                </h4>
+                <p class="text-xs text-blue-100 mb-3">Cotiza directamente por WhatsApp con nuestro número principal:</p>
+                <a href="https://wa.me/5215542721803?text=Hola,%20quiero%20cotizar%20un%20evento" target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold px-4 py-2.5 rounded-xl text-sm transition shadow-md">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                    <span>55 4272 1803</span>
+                </a>
+            </div>
+
+            <!-- Columna 3: Teléfonos Adicionales y Correo -->
+            <div class="flex flex-col items-center md:items-start">
+                <h4 class="text-base font-bold mb-3 flex items-center gap-2">
+                    <i class="fas fa-phone-alt text-blue-200 text-sm"></i> Teléfonos de Contacto
+                </h4>
+                <div class="space-y-1.5 text-xs sm:text-sm text-blue-100">
+                    <p class="flex items-center justify-center md:justify-start gap-2">
+                        <i class="fas fa-phone text-[10px] text-blue-200"></i>
+                        <a href="tel:5589864747" class="hover:underline">55 8986 4747</a>
+                    </p>
+                    <p class="flex items-center justify-center md:justify-start gap-2">
+                        <i class="fas fa-phone text-[10px] text-blue-200"></i>
+                        <a href="tel:5517152239" class="hover:underline">55 1715 2239</a>
+                    </p>
+                    <p class="flex items-center justify-center md:justify-start gap-2">
+                        <i class="fas fa-phone text-[10px] text-blue-200"></i>
+                        <a href="tel:5592689567" class="hover:underline">55 9268 9567</a>
+                    </p>
+
+                    <div class="pt-3 border-t border-blue-500/40 mt-3 w-full">
+                        <p class="flex items-center justify-center md:justify-start gap-2">
+                            <i class="fas fa-envelope text-blue-200"></i>
+                            <a href="mailto:alquiladoragmpadierna@hotmail.com"
+                                class="hover:underline break-all">alquiladoragmpadierna@hotmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="max-w-6xl mx-auto px-4 pt-6 text-center text-xs text-blue-200">
+            <p>© 2026 Alquiladora GM. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
