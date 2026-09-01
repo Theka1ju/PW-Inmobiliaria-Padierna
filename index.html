@@ -9,7 +9,7 @@
     <meta name="description"
         content="Catálogo de alquiler de carpas, lonas, mesas, sillas Tiffany, mantelería, cristalería y equipo para fiestas y eventos sociales.">
     <meta name="keywords"
-        content="alquiler de sillas, renta de mesas, renta de lonas, carpas para eventos, sillas tiffany, Alquiladora GM">
+        content="alquiler de sillas, renta de mesas, renta de lonas, carpas para eventos, sillas tiffany, Alquiladora Padierna GM">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -25,81 +25,75 @@
     </style>
 </head>
 
-<body class="bg-gray-50 text-gray-800 font-sans min-h-screen flex flex-col justify-between">
+<body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col justify-between">
 
-    <!-- Header Centrado con Botón de WhatsApp -->
-    <header class="bg-blue-600 text-white sticky top-0 z-40 shadow-md">
-        <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-between gap-3">
+    <!-- Sección Principal / Hero con Logo de Fondo -->
+    <section
+        class="relative bg-slate-900 text-white py-16 px-4 text-center border-b border-slate-700 overflow-hidden min-h-[320px] flex items-center justify-center">
 
-            <!-- Espacio compensador para alineación en pantallas grandes -->
-            <div class="hidden sm:block sm:w-44"></div>
+        <!-- Imagen del Logo de Fondo Ajustada -->
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <img src="img/logo.jpg" alt="Fondo Logo"
+                class="w-52 sm:w-72 md:w-80 h-auto object-contain opacity-25 filter blur-[0.5px]">
+        </div>
 
-            <!-- Identidad Centrada -->
-            <div class="flex items-center justify-center gap-3 text-center">
-                <img src="img/logo.png" alt="Logo Alquiladora GM"
-                    class="h-10 w-10 sm:h-12 sm:w-12 object-contain bg-white rounded-full p-1 shadow-xs"
-                    onerror="this.style.display='none'">
-                <div class="text-center">
-                    <h1 class="text-xl sm:text-2xl font-bold leading-tight">Alquiladora GM</h1>
-                    <p class="text-[11px] sm:text-xs text-blue-100">Alquiler de mobiliario, lonas y equipo</p>
-                </div>
-            </div>
+        <!-- Capa sutil de oscurecido para contraste -->
+        <div class="absolute inset-0 bg-slate-950/40 pointer-events-none"></div>
 
-            <!-- Botón WhatsApp Header -->
+        <!-- Elementos Integrados y Centrados -->
+        <div class="relative z-10 max-w-2xl mx-auto flex flex-col items-center">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight drop-shadow-md">
+                Alquiladora Padierna GM
+            </h1>
+            <p class="text-sm sm:text-base text-slate-300 font-medium mt-1 drop-shadow-sm">
+                Alquiler de mobiliario, lonas y equipo
+            </p>
+
+            <p class="text-xs sm:text-sm text-slate-300 max-w-lg mt-4 leading-relaxed drop-shadow-sm">
+                Explora nuestro catálogo completo. Haz clic en cualquier artículo para ver sus fotos y especificaciones,
+                o cotiza directo por WhatsApp.
+            </p>
+
+            <!-- Botón de WhatsApp integrado al centro -->
             <a href="https://wa.me/5215542721803?text=Hola,%20quiero%20cotizar%20un%20evento" target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold px-4 py-2 rounded-full text-xs sm:text-sm transition shadow-md w-full sm:w-auto">
-                <i class="fab fa-whatsapp text-base sm:text-lg"></i>
+                class="mt-6 inline-flex items-center justify-center gap-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3 rounded-full text-sm sm:text-base transition-all shadow-lg hover:scale-105 active:scale-95">
+                <i class="fab fa-whatsapp text-lg sm:text-xl"></i>
                 <span>Cotizar por WhatsApp</span>
             </a>
-
-        </div>
-    </header>
-
-    <!-- Hero Section con Marca de Agua Difuminada -->
-    <section class="relative bg-blue-50 py-12 px-4 text-center border-b border-blue-100 overflow-hidden">
-        <div class="absolute inset-0 bg-center bg-no-repeat bg-contain opacity-10 pointer-events-none filter blur-[1px]"
-            style="background-image: url('img/logo.png');"></div>
-
-        <div class="relative z-10 max-w-2xl mx-auto text-center">
-            <h2 class="text-2xl md:text-3xl font-extrabold text-blue-900 mb-2">Catálogo de Alquiler para Eventos</h2>
-            <p class="text-gray-600 text-sm md:text-base leading-relaxed">
-                Explora nuestro mobiliario, lonas y cristalería. Haz clic en cualquier artículo para ver más detalles y
-                fotos en grande, o cotiza de inmediato por WhatsApp.
-            </p>
         </div>
     </section>
 
     <!-- Catálogo y Filtros Centrados -->
-    <main class="max-w-6xl mx-auto px-4 py-8 flex-1 w-full text-center">
-        <div class="flex flex-col items-center justify-center gap-4 mb-8 border-b pb-6">
+    <main class="max-w-6xl mx-auto px-4 py-10 flex-1 w-full text-center">
+        <div class="flex flex-col items-center justify-center gap-4 mb-8 border-b border-slate-200 pb-6">
             <div class="text-center">
-                <h3 class="text-xl sm:text-2xl font-bold text-gray-800">Nuestros Productos</h3>
-                <p class="text-xs sm:text-sm text-gray-500 mt-1">Selecciona una categoría para filtrar</p>
+                <h2 class="text-xl sm:text-2xl font-bold text-slate-800">Nuestros Productos</h2>
+                <p class="text-xs sm:text-sm text-slate-500 mt-1">Selecciona una categoría para filtrar</p>
             </div>
 
             <!-- Barra de Filtros Centrada -->
             <div class="flex flex-wrap justify-center gap-2 max-w-full overflow-x-auto pb-2 scrollbar-none"
                 id="category-filters">
                 <button onclick="filtrarCategoria('Todos')"
-                    class="cat-btn active bg-blue-600 text-white px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap shadow-sm">Todos</button>
+                    class="cat-btn active bg-slate-800 text-white px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap shadow-sm">Todos</button>
                 <button onclick="filtrarCategoria('Mesas y Juegos')"
-                    class="cat-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-300 transition">Mesas
+                    class="cat-btn bg-slate-200 text-slate-700 px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap hover:bg-slate-300 transition">Mesas
                     y Juegos</button>
                 <button onclick="filtrarCategoria('Lonas y Carpas')"
-                    class="cat-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-300 transition">Lonas
+                    class="cat-btn bg-slate-200 text-slate-700 px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap hover:bg-slate-300 transition">Lonas
                     y Carpas</button>
                 <button onclick="filtrarCategoria('Sillas')"
-                    class="cat-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-300 transition">Sillas</button>
+                    class="cat-btn bg-slate-200 text-slate-700 px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap hover:bg-slate-300 transition">Sillas</button>
                 <button onclick="filtrarCategoria('Mantelería')"
-                    class="cat-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-300 transition">Mantelería</button>
+                    class="cat-btn bg-slate-200 text-slate-700 px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap hover:bg-slate-300 transition">Mantelería</button>
                 <button onclick="filtrarCategoria('Cristalería')"
-                    class="cat-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-300 transition">Cristalería</button>
+                    class="cat-btn bg-slate-200 text-slate-700 px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap hover:bg-slate-300 transition">Cristalería</button>
                 <button onclick="filtrarCategoria('Equipo y Servicios')"
-                    class="cat-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-300 transition">Equipo
+                    class="cat-btn bg-slate-200 text-slate-700 px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap hover:bg-slate-300 transition">Equipo
                     & Servicios</button>
                 <button onclick="filtrarCategoria('Pisos y Pistas')"
-                    class="cat-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-300 transition">Pisos
+                    class="cat-btn bg-slate-200 text-slate-700 px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap hover:bg-slate-300 transition">Pisos
                     y Pistas</button>
             </div>
         </div>
@@ -122,7 +116,7 @@
             </button>
 
             <!-- Carrusel de Imágenes -->
-            <div class="relative w-full h-64 bg-gray-900 select-none">
+            <div class="relative w-full h-64 bg-slate-900 select-none">
                 <img id="carousel-img" src="" alt="" class="w-full h-full object-cover">
 
                 <button id="carousel-prev" onclick="cambiarFotoCarrusel(-1)"
@@ -144,20 +138,20 @@
             <div class="p-5 overflow-y-auto flex-1 flex flex-col justify-between text-center">
                 <div>
                     <span id="modal-cat"
-                        class="text-xs font-bold text-blue-600 uppercase tracking-wide">Categoría</span>
-                    <h3 id="modal-title" class="text-xl font-extrabold text-gray-900 mt-1">Nombre del Producto</h3>
-                    <p id="modal-price" class="text-2xl font-black text-blue-600 mt-2">$0.00 MXN</p>
+                        class="text-xs font-bold text-slate-500 uppercase tracking-wider">Categoría</span>
+                    <h3 id="modal-title" class="text-xl font-extrabold text-slate-900 mt-1">Nombre del Producto</h3>
+                    <p id="modal-price" class="text-2xl font-black text-slate-800 mt-2">$0.00 MXN</p>
 
-                    <div class="mt-4 border-t pt-3 text-center">
-                        <h4 class="text-xs font-bold text-gray-400 uppercase">Detalles y Especificaciones</h4>
-                        <p id="modal-desc" class="text-sm text-gray-600 mt-1 leading-relaxed">Descripción del artículo.
+                    <div class="mt-4 border-t border-slate-100 pt-3 text-center">
+                        <h4 class="text-xs font-bold text-slate-400 uppercase">Detalles y Especificaciones</h4>
+                        <p id="modal-desc" class="text-sm text-slate-600 mt-1 leading-relaxed">Descripción del artículo.
                         </p>
                     </div>
                 </div>
 
-                <div class="mt-6 pt-4 border-t">
+                <div class="mt-6 pt-4 border-t border-slate-100">
                     <button onclick="cerrarDetalle()"
-                        class="w-full py-2.5 px-4 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-xl font-bold text-sm transition">
+                        class="w-full py-2.5 px-4 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-bold text-sm transition">
                         Cerrar
                     </button>
                 </div>
@@ -166,19 +160,14 @@
     </div>
 
     <!-- FOOTER -->
-    <footer class="bg-blue-600 text-white mt-16 pt-12 pb-8 border-t border-blue-700 shadow-inner">
+    <footer class="bg-slate-800 text-white mt-16 pt-12 pb-8 border-t border-slate-700 shadow-inner">
         <div
-            class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-blue-500/50 text-center md:text-left">
+            class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-slate-700 text-center md:text-left">
 
             <!-- Columna 1: Identidad -->
             <div class="flex flex-col items-center md:items-start">
-                <div class="flex items-center gap-3 mb-3">
-                    <img src="img/logo.png" alt="Logo Alquiladora GM"
-                        class="h-10 w-10 object-contain bg-white rounded-full p-1 shadow-xs"
-                        onerror="this.style.display='none'">
-                    <h3 class="text-xl font-bold">Alquiladora GM</h3>
-                </div>
-                <p class="text-blue-100 text-xs sm:text-sm leading-relaxed">
+                <h3 class="text-xl font-bold tracking-tight mb-2">Alquiladora Padierna GM</h3>
+                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
                     Renta de carpas, lonas, mesas, sillas, mantelería, cristalería y equipo para todo tipo de fiestas y
                     eventos sociales.
                 </p>
@@ -187,12 +176,13 @@
             <!-- Columna 2: Contacto WhatsApp Directo -->
             <div class="flex flex-col items-center md:items-start">
                 <h4 class="text-base font-bold mb-3 flex items-center gap-2">
-                    <i class="fab fa-whatsapp text-green-400 text-lg"></i> Atención Inmediata
+                    <i class="fab fa-whatsapp text-emerald-400 text-lg"></i> Atención Inmediata
                 </h4>
-                <p class="text-xs text-blue-100 mb-3">Cotiza directamente por WhatsApp con nuestro número principal:</p>
+                <p class="text-xs text-slate-300 mb-3">Cotiza directamente por WhatsApp con nuestro número principal:
+                </p>
                 <a href="https://wa.me/5215542721803?text=Hola,%20quiero%20cotizar%20un%20evento" target="_blank"
                     rel="noopener noreferrer"
-                    class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold px-4 py-2.5 rounded-xl text-sm transition shadow-md">
+                    class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-4 py-2.5 rounded-xl text-sm transition shadow-md">
                     <i class="fab fa-whatsapp text-lg"></i>
                     <span>55 4272 1803</span>
                 </a>
@@ -201,25 +191,25 @@
             <!-- Columna 3: Teléfonos Adicionales y Correo -->
             <div class="flex flex-col items-center md:items-start">
                 <h4 class="text-base font-bold mb-3 flex items-center gap-2">
-                    <i class="fas fa-phone-alt text-blue-200 text-sm"></i> Teléfonos de Contacto
+                    <i class="fas fa-phone-alt text-slate-400 text-sm"></i> Teléfonos de Contacto
                 </h4>
-                <div class="space-y-1.5 text-xs sm:text-sm text-blue-100">
+                <div class="space-y-1.5 text-xs sm:text-sm text-slate-300">
                     <p class="flex items-center justify-center md:justify-start gap-2">
-                        <i class="fas fa-phone text-[10px] text-blue-200"></i>
+                        <i class="fas fa-phone text-[10px] text-slate-400"></i>
                         <a href="tel:5589864747" class="hover:underline">55 8986 4747</a>
                     </p>
                     <p class="flex items-center justify-center md:justify-start gap-2">
-                        <i class="fas fa-phone text-[10px] text-blue-200"></i>
+                        <i class="fas fa-phone text-[10px] text-slate-400"></i>
                         <a href="tel:5517152239" class="hover:underline">55 1715 2239</a>
                     </p>
                     <p class="flex items-center justify-center md:justify-start gap-2">
-                        <i class="fas fa-phone text-[10px] text-blue-200"></i>
+                        <i class="fas fa-phone text-[10px] text-slate-400"></i>
                         <a href="tel:5592689567" class="hover:underline">55 9268 9567</a>
                     </p>
 
-                    <div class="pt-3 border-t border-blue-500/40 mt-3 w-full">
+                    <div class="pt-3 border-t border-slate-700 mt-3 w-full">
                         <p class="flex items-center justify-center md:justify-start gap-2">
-                            <i class="fas fa-envelope text-blue-200"></i>
+                            <i class="fas fa-envelope text-slate-400"></i>
                             <a href="mailto:alquiladoragmpadierna@hotmail.com"
                                 class="hover:underline break-all">alquiladoragmpadierna@hotmail.com</a>
                         </p>
@@ -230,7 +220,7 @@
         </div>
 
         <!-- Copyright -->
-        <div class="max-w-6xl mx-auto px-4 pt-6 text-center text-xs text-blue-200">
+        <div class="max-w-6xl mx-auto px-4 pt-6 text-center text-xs text-slate-400">
             <p>© 2026 Alquiladora Padierna GM. Todos los derechos reservados.</p>
         </div>
     </footer>
