@@ -1,185 +1,258 @@
 // Configuración del Negocio
 const PHONE_NUMBER = "5215542721803";
 
-// Catálogo Oficial Completo - Alquiladora Padierna GM (Precios Actualizados)
+// Catálogo Oficial Completo - Alquiladora GM Padierna (Precios Actualizados)
 const productos = [
     // ==================== 1. CARPAS ====================
-    { id: 10, nombre: "Carpa Estructura 3 x 3 m", categoria: "Carpas", precio: 1500, fotos: ["img/carpa_estructura.jpg", "img/carpa_estructura2.jpg"], desc: "Carpa modular tipo domo de 3x3m para accesos o stands." },
-    { id: 11, nombre: "Carpa Estructura 5 x 3 m", categoria: "Carpas", precio: 1800, fotos: ["img/carpa_estructura.jpg", "img/carpa_estructura2.jpg", "img/carpa_estructura3.jpg"], desc: "Carpa modular tipo domo/árabe de 5x3m." },
-    { id: 12, nombre: "Carpa Estructura 5 x 4 m", categoria: "Carpas", precio: 1800, fotos: ["img/carpa_estructura.jpg", "img/carpa_estructura2.jpg"], desc: "Carpa elegante tipo domo/árabe de 5x4m." },
-    { id: 13, nombre: "Carpa Estructura 5 x 5 m", categoria: "Carpas", precio: 2200, fotos: ["img/carpa_estructura.jpg", "img/carpa_estructura2.jpg"], desc: "Carpa cuadrada de 5x5m con estructura profesional." },
-    { id: 14, nombre: "Carpa Estructura 6 x 3 m", categoria: "Carpas", precio: 2200, fotos: ["img/carpa_estructura.jpg", "img/carpa_estructura2.jpg"], desc: "Carpa estructural de 6x3m." },
-    { id: 15, nombre: "Carpa Estructura 6 x 4 m", categoria: "Carpas", precio: 2200, fotos: ["img/carpa_estructura.jpg", "img/carpa_estructura2.jpg"], desc: "Carpa estructural de 6x4m." },
-    { id: 16, nombre: "Carpa Estructura 6 x 5 m", categoria: "Carpas", precio: 2200, fotos: ["img/carpa_estructura.jpg", "img/carpa_estructura2.jpg"], desc: "Carpa estructural de 6x5m." },
-    { id: 17, nombre: "Carpa Estructura 6 x 6 m", categoria: "Carpas", precio: 2400, fotos: ["img/carpa_estructura.jpg", "img/carpa_estructura2.jpg"], desc: "Carpa estructural de 6x6m." },
-    { id: 18, nombre: "Carpa Estructura 8 x 3 m", categoria: "Carpas", precio: 2500, fotos: ["img/carpa_estructura.jpg", "img/carpa_estructura2.jpg"], desc: "Carpa estructural de 8x3m." },
-    { id: 19, nombre: "Carpa Estructura 8 x 4 m", categoria: "Carpas", precio: 2500, fotos: ["img/carpa_estructura.jpg", "img/carpa_estructura2.jpg"], desc: "Carpa estructural de 8x4m." },
-    { id: 20, nombre: "Carpa Estructura 8 x 5 m", categoria: "Carpas", precio: 2500, fotos: ["img/carpa_estructura.jpg", "img/carpa_estructura2.jpg"], desc: "Carpa estructural de 8x5m para jardín o terraza." },
-    { id: 21, nombre: "Carpa Estructura 8 x 6 m", categoria: "Carpas", precio: 3200, fotos: ["img/carpa_estructura.jpg", "img/carpa_estructura2.jpg"], desc: "Carpa estructural de 8x6m." },
-    { id: 22, nombre: "Carpa Estructura 10 x 3 m", categoria: "Carpas", precio: 3300, fotos: ["img/carpa_estructura.jpg", "img/carpa_estructura2.jpg"], desc: "Carpa estructural de 10x3m." },
-    { id: 23, nombre: "Carpa Estructura 10 x 4 m", categoria: "Carpas", precio: 3300, fotos: ["img/carpa_estructura.jpg", "img/carpa_estructura2.jpg"], desc: "Carpa estructural de 10x4m." },
-    { id: 24, nombre: "Carpa Estructura 10 x 5 m", categoria: "Carpas", precio: 3300, fotos: ["img/carpa_estructura.jpg", "img/carpa_estructura2.jpg"], desc: "Carpa amplia de 10x5m." },
-    { id: 25, nombre: "Carpa Estructura 10 x 6 m", categoria: "Carpas", precio: 3300, fotos: ["img/carpa_estructura.jpg", "img/carpa_estructura2.jpg"], desc: "Carpa estructural de 10x6m para banquetes." },
-    { id: 26, nombre: "Carpa Estructura 10 x 8 m", categoria: "Carpas", precio: 4500, fotos: ["img/carpa_estructura.jpg", "img/carpa_estructura2.jpg"], desc: "Carpa estructural de gran formato 10x8m." },
-    { id: 27, nombre: "Carpa Estructura 10 x 10 m", categoria: "Carpas", precio: 6000, fotos: ["img/carpa_estructura.jpg", "img/carpa_estructura2.jpg"], desc: "Carpa estructural de 10x10m (100 m²)." },
-    { id: 28, nombre: "Carpa Estructura 10 x 15 m", categoria: "Carpas", precio: 9500, fotos: ["img/carpa_estructura.jpg", "img/carpa_estructura2.jpg"], desc: "Carpa monumental de 10x15m para bodas y recepciones." },
+    {
+        id: 1,
+        nombre: "Carpas Estructurales y Transparentes",
+        categoria: "Carpas",
+        precio: 0,
+        fotos: [
+            "img/carpa.jpeg",
+            "img/carpa_estructura5x5.jpeg",
+            "img/carpa_estructura5x20.jpeg",
+            "img/carpa_estructura8x5.jpeg",
+            "img/carpa_estructura8x10.jpeg",
+            "img/carpa_estructura8x15.jpeg",
+            "img/carpa_estructura10x10.jpeg",
+            "img/carpa_estructura10x15.jpeg",
+            "img/carpa_estructura10x20.jpeg",
+            "img/carpa_estructura_tr10x5.jpeg",
+            "img/carpa_estructura_tr.jpeg",
+            "img/carpa_estructura_tr10x15.jpeg",
+            "img/carpa_estructura_tr10x20.jpeg"
+        ],
+        desc: "Carpa Estructura - 3 x 3 m - $1,500 MXN\n" +
+            "Carpa Estructura - 5 x 3 m - $1,800 MXN\n" +
+            "Carpa Estructura - 5 x 4 m - $1,800 MXN\n" +
+            "Carpa Estructura - 5 x 5 m - $2,200 MXN\n" +
+            "Carpa Estructura - 5 x 20 m - $6,500 MXN\n" +
+            "Carpa Estructura - 6 x 3 m - $2,200 MXN\n" +
+            "Carpa Estructura - 6 x 4 m - $2,200 MXN\n" +
+            "Carpa Estructura - 6 x 5 m - $2,200 MXN\n" +
+            "Carpa Estructura - 6 x 6 m - $2,400 MXN\n" +
+            "Carpa Estructura - 8 x 3 m - $2,500 MXN\n" +
+            "Carpa Estructura - 8 x 4 m - $2,500 MXN\n" +
+            "Carpa Estructura - 8 x 5 m - $2,500 MXN\n" +
+            "Carpa Estructura - 8 x 6 m - $3,200 MXN\n" +
+            "Carpa Estructura - 8 x 10 m - $5,000 MXN\n" +
+            "Carpa Estructura - 8 x 15 m - $7,500 MXN\n" +
+            "Carpa Estructura - 10 x 3 m - $3,300 MXN\n" +
+            "Carpa Estructura - 10 x 4 m - $3,300 MXN\n" +
+            "Carpa Estructura - 10 x 5 m - $3,300 MXN\n" +
+            "Carpa Estructura - 10 x 6 m - $3,300 MXN\n" +
+            "Carpa Estructura - 10 x 8 m - $4,500 MXN\n" +
+            "Carpa Estructura - 10 x 10 m - $6,000 MXN\n" +
+            "Carpa Estructura - 10 x 15 m - $9,500 MXN\n" +
+            "Carpa Estructura - 10 x 20 m - $9,500 MXN\n" +
+            "Carpa Transparente (Triángulo 10m - Altura 3m) - 10 x 5 m - $5,000 MXN\n" +
+            "Carpa Transparente (Triángulo 10m - Altura 3m) - 10 x 10 m - $10,000 MXN\n" +
+            "Carpa Transparente (Triángulo 10m - Altura 3m) - 10 x 15 m - $15,000 MXN\n" +
+            "Carpa Transparente (Triángulo 10m - Altura 3m) - 10 x 20 m - $20,000 MXN\n" +
+            "Carpa Transparente (Triángulo 10m - Altura 3m) - 10 x 25 m - $25,000 MXN\n" +
+            "Carpa Transparente (Triángulo 10m - Altura 3m) - 10 x 30 m - $30,000 MXN\n" +
+            "Carpa Transparente (Triángulo 15m - Altura 3-4m) - 15 x 5 m - $9,750 MXN\n" +
+            "Carpa Transparente (Triángulo 15m - Altura 3-4m) - 15 x 10 m - $19,500 MXN\n" +
+            "Carpa Transparente (Triángulo 15m - Altura 3-4m) - 15 x 15 m - $29,250 MXN\n" +
+            "Carpa Transparente (Triángulo 15m - Altura 3-4m) - 15 x 20 m - $39,000 MXN\n" +
+            "Carpa Transparente (Triángulo 15m - Altura 3-4m) - 15 x 25 m - $48,750 MXN\n" +
+            "Carpa Transparente (Triángulo 15m - Altura 3-4m) - 15 x 30 m - $58,500 MXN\n" +
+            "Carpa Blanca Estructura (Triángulo 15m - Altura 3m) - 15 x 5 m - $6,000 MXN\n" +
+            "Carpa Blanca Estructura (Triángulo 15m - Altura 3m) - 15 x 10 m - $12,000 MXN\n" +
+            "Carpa Blanca Estructura (Triángulo 15m - Altura 3m) - 15 x 15 m - $18,000 MXN\n" +
+            "Carpa Blanca Estructura (Triángulo 15m - Altura 3m) - 15 x 20 m - $24,000 MXN\n" +
+            "Carpa Blanca Estructura (Triángulo 15m - Altura 3m) - 15 x 25 m - $30,000 MXN\n" +
+            "Carpa Blanca Estructura (Triángulo 15m - Altura 3m) - 15 x 30 m - $36,000 MXN"
+    },
 
     // ==================== 2. MESAS Y SILLAS ====================
-    // --- Mesas Tablón ---
-    { id: 30, nombre: "Mesa Tablón Solo (2.40 x 0.70m)", categoria: "Mesas y Sillas", precio: 100, fotos: ["img/mesa_tablon.jpg","img/mesa_tablon2.jpg"], desc: "Tablón rectangular solo (sin sillería)." },
-    { id: 31, nombre: "Mesa Tablón c/10 Sillas Acojinadas", categoria: "Mesas y Sillas", precio: 300, fotos: ["img/tabloon_acojina.jpeg"], desc: "Tablón rectangular de 2.40 x 0.70m con 10 sillas acojinadas." },
-    { id: 32, nombre: "Mesa Tablón c/10 Sillas Tiffany Blanca", categoria: "Mesas y Sillas", precio: 550, fotos: ["img/vintage_tiffany.jpeg"], desc: "Tablón de 2.40m con 10 sillas Tiffany blancas." },
-    { id: 33, nombre: "Mesa Tablón c/10 Sillas Tiffany Dorada", categoria: "Mesas y Sillas", precio: 650, fotos: ["img/tiffanyDorada.jpeg"], desc: "Tablón de 2.40m con 10 sillas Tiffany doradas." },
-    { id: 34, nombre: "Mesa Tablón c/10 Sillas Tiffany Negra", categoria: "Mesas y Sillas", precio: 800, fotos: ["img/tablon_tifanny_negro.jpg"], desc: "Tablón de 2.40m con 10 sillas Tiffany negras." },
-    { id: 35, nombre: "Mesa Tablón c/10 Sillas Avant Garden", categoria: "Mesas y Sillas", precio: 700, fotos: ["img/avant_garden.jpeg"], desc: "Tablón con 10 sillas plegables Avant Garden de madera." },
-    { id: 36, nombre: "Mesa Tablón c/10 Sillas Crossback", categoria: "Mesas y Sillas", precio: 900, fotos: ["img/crossback.jpeg"], desc: "Tablón con 10 sillas Crossback de madera natural." },
-    { id: 37, nombre: "Mesa Tablón Vestida", categoria: "Mesas y Sillas", precio: 400, fotos: ["img/tablon_vestida2.jpg","img/tablon_vestida.jpg"], desc: "Incluye mantel blanco, banda de color, cubremantel, funda blanca para sillas y 10 sillas acojinadas." },
+    // --- Mesas California ---
+    { id: 2, nombre: "Mesa california", categoria: "Mesas y Sillas", precio: 1000, fotos: ["img/california.jpeg"], desc: "Mesa california para 10 personas." },
+    { id: 3, nombre: "Mesa california con silla crossback", categoria: "Mesas y Sillas", precio: 2200, fotos: ["img/californiacross.jpeg", "img/californiacross1.jpeg", "img/californiacross2.jpeg", "img/californiacross3.jpeg", "img/californiacross4.jpeg"], desc: "Mesa california para 10 personas con sillas crossback." },
+    
+    // --- Mesa Rústica o Campirana ---
+    { id: 4, nombre: "Mesa Rústica Sola (1.00 x 2.44m)", categoria: "Mesas y Sillas", precio: 800, fotos: ["img/rustica_sola.jpg", "img/rustica_sola2.jpg", "img/rustica_sola3.jpg"], desc: "Mesa rústica de madera sólida de 1.00 x 2.44m individual." },
+    {
+        id: 5,
+        nombre: "Mesa Rústica / Campirana c/10 Sillas Tiffany",
+        categoria: "Mesas y Sillas",
+        precio: 0,
+        fotos: [
+            "img/rustica_tifany_blanca.jpg",
+            "img/rustica_tifany_blanca2.jpg",
+            "img/rustica_tifany_negra.jpg"
+        ],
+        desc:
+            "Mesa Rústica c/10 Sillas Tiffany Blanca - Incluye camino de color - $1,400 MXN\n" +
+            "Mesa Rústica c/10 Sillas Tiffany Dorada - Incluye camino de color - $1,500 MXN\n" +
+            "Mesa Rústica c/10 Sillas Tiffany Negra - Incluye camino de color - $1,600 MXN"
+    },
+    { id: 6, nombre: "Mesa Rústica / Campirana c/10 Sillas Avant Garden", categoria: "Mesas y Sillas", precio: 1500, fotos: ["img/mesacampiranagarden.jpeg", "img/rustica_avant.jpg", "img/rustica_avant2.jpg", "img/rustica_avant3.jpg", "img/rustica_avant4.jpg", "img/rustica_avant5.jpg"], desc: "Mesa rústica con 10 sillas Avant Garden. Incluye camino de mesa a elegir." },
+    { id: 7, nombre: "Mesa Rústica / Campirana c/10 Sillas Crossback", categoria: "Mesas y Sillas", precio: 1700, fotos: ["img/mesacampiranacrossback.jpeg", "img/mesacampiranacrossback1.jpeg", "img/mesacampiranacrossback2.jpeg"], desc: "Mesa rústica con 10 sillas Crossback. Incluye camino de mesa a elegir." },
 
-    // --- Mesas Redondas ---
-    { id: 40, nombre: "Mesa Redonda Sola (1.50 m)", categoria: "Mesas y Sillas", precio: 150, fotos: ["img/redonda_sola.jpg","img/redonda_sola2.jpg","img/redonda_sola3.jpg"], desc: "Mesa redonda sola sin sillas (capacidad 10 personas)." },
-    { id: 41, nombre: "Mesa Redonda c/10 Sillas Acojinadas", categoria: "Mesas y Sillas", precio: 350, fotos: ["img/redonda_acojinada.jpeg"], desc: "Mesa redonda para 10 personas con 10 sillas acojinadas." },
-    { id: 42, nombre: "Mesa Redonda c/10 Sillas Tiffany Blanca", categoria: "Mesas y Sillas", precio: 600, fotos: ["img/redonda_tiffany_blanca.jpg","img/redonda_tiffany_blanca2.jpg"], desc: "Mesa redonda para 10 personas con 10 sillas Tiffany blancas." },
-    { id: 43, nombre: "Mesa Redonda c/10 Sillas Tiffany Dorada", categoria: "Mesas y Sillas", precio: 700, fotos: ["img/tiffanyDorada.jpeg"], desc: "Mesa redonda para 10 personas con 10 sillas Tiffany doradas." },
-    { id: 44, nombre: "Mesa Redonda c/10 Sillas Tiffany Negra", categoria: "Mesas y Sillas", precio: 850, fotos: ["img/redondatiffany.jpeg"], desc: "Mesa redonda con 10 sillas Tiffany negras." },
-    { id: 45, nombre: "Mesa Redonda c/10 Sillas Avant Garden", categoria: "Mesas y Sillas", precio: 900, fotos: ["img/avant_garden.jpeg"], desc: "Mesa redonda para 10 personas con 10 sillas Avant Garden." },
-    { id: 46, nombre: "Mesa Redonda c/10 Sillas Crossback", categoria: "Mesas y Sillas", precio: 1000, fotos: ["img/redondacrossback.jpeg", "img/redondacrossback2.jpeg"], desc: "Mesa redonda con 10 sillas de madera Crossback." },
-    { id: 47, nombre: "Mesa Redonda Vestida", categoria: "Mesas y Sillas", precio: 450, fotos: ["img/redonda_vestida.jpg","img/redonda_vestida2.jpg","img/redonda_vestida3.jpg"], desc: "Incluye mantel blanco, banda de color, cubremantel, funda blanca para sillas y 10 sillas acojinadas." },
-
-    // --- Mesas Redondas con Sombrilla ---
-    { id: 50, nombre: "Mesa Redonda c/Sombrilla s/Sillas", categoria: "Mesas y Sillas", precio: 350, fotos: [], desc: "Mesa redonda con sombrilla integrada (sin sillas)." },
-    { id: 51, nombre: "Mesa Redonda c/Sombrilla y 10 Sillas Acojinadas", categoria: "Mesas y Sillas", precio: 600, fotos: ["img/acojinada_sombra.jpg","img/acojinada_sombra2.jpg"], desc: "Mesa redonda con sombrilla y 10 sillas acojinadas." },
-    { id: 52, nombre: "Mesa Redonda c/Sombrilla y 10 Sillas Tiffany Blanca", categoria: "Mesas y Sillas", precio: 800, fotos: ["img/tifanny_blanca_sombra.jpg","img/tifanny_blanca_sombra2.jpg","img/tifanny_blanca_sombra3.jpg"], desc: "Mesa redonda con sombrilla y 10 sillas Tiffany blancas." },
-    { id: 53, nombre: "Mesa Redonda c/Sombrilla y 10 Sillas Tiffany Dorada", categoria: "Mesas y Sillas", precio: 900, fotos: [], desc: "Mesa redonda con sombrilla y 10 sillas Tiffany doradas." },
-    { id: 54, nombre: "Mesa Redonda c/Sombrilla y 10 Sillas Tiffany Negra", categoria: "Mesas y Sillas", precio: 1000, fotos: [], desc: "Mesa redonda con sombrilla y 10 sillas Tiffany negras." },
-    { id: 55, nombre: "Mesa Redonda c/Sombrilla y 10 Sillas Avant Garden", categoria: "Mesas y Sillas", precio: 900, fotos: ["avant_sombra.jpg","avant_sombra2.jpg"], desc: "Mesa redonda con sombrilla y 10 sillas Avant Garden." },
-    { id: 56, nombre: "Mesa Redonda c/Sombrilla y 10 Sillas Crossback", categoria: "Mesas y Sillas", precio: 1100, fotos: ["img/crossback_sombra.jpg","img/crossback_sombra2.jpg"], desc: "Mesa redonda con sombrilla y 10 sillas Crossback." },
-    { id: 57, nombre: "Sombrilla con Base", categoria: "Mesas y Sillas", precio: 250, fotos: ["img/sombrilla.jpg"], desc: "Sombrilla individual para exterior incluye su base firme." },
-    { id: 58, nombre: "Base de Sombrilla", categoria: "Mesas y Sillas", precio: 100, fotos: ["img/base_sombrilla.jpg"], desc: "Base firme para sombrilla individual." },
+    // --- Mesas Vintage Agrupadas ---
+    {
+        id: 8,
+        nombre: "Mesas Vintage (Rectangulares y Cuadradas)",
+        categoria: "Mesas y Sillas",
+        precio: 0,
+        fotos: [
+            "img/vintage_tiff_blanca.jpeg"
+        ],
+        desc:
+            "Mesa Vintage Rectangular 12p (Tiffany Blanca) - 1.22 x 2.44 m - $1,400 MXN\n" +
+            "Mesa Vintage Rectangular 12p (Tiffany Dorada) - 1.22 x 2.44 m - $1,500 MXN\n" +
+            "Mesa Vintage Rectangular 12p (Tiffany Negra) - 1.22 x 2.44 m - $1,600 MXN\n" +
+            "Mesa Vintage Cuadrada 12p (Tiffany Blanca) - 1.70 x 1.70 m - $1,400 MXN\n" +
+            "Mesa Vintage Cuadrada 12p (Tiffany Dorada) - 1.70 x 1.70 m - $1,500 MXN\n" +
+            "Mesa Vintage Cuadrada 12p (Tiffany Negra) - 1.70 x 1.70 m - $1,600 MXN\n" +
+            "Mesa Vintage Rectangular 10p (Tiffany Blanca) - 0.75 x 2.44 m - $1,200 MXN\n" +
+            "Mesa Vintage Rectangular 10p (Tiffany Dorada) - 0.75 x 2.44 m - $1,300 MXN\n" +
+            "Mesa Vintage Rectangular 10p (Tiffany Negra) - 0.75 x 2.44 m - $1,400 MXN"
+    },
 
     // --- Mesas Cuadradas ---
-    { id: 60, nombre: "Mesa Cuadrada Sola (1.50 x 1.50m)", categoria: "Mesas y Sillas", precio: 250, fotos: ["img/mesa_cua.jpg"], desc: "Mesa cuadrada tipo imperial de 1.50 x 1.50m sola." },
-    { id: 61, nombre: "Mesa Cuadrada c/10 Sillas Acojinadas", categoria: "Mesas y Sillas", precio: 600, fotos: ["img/mesa_cua_aco.jpg"], desc: "Mesa cuadrada imperial con 10 sillas acojinadas." },
-    { id: 62, nombre: "Mesa Cuadrada c/10 Sillas Tiffany Blanca", categoria: "Mesas y Sillas", precio: 900, fotos: ["img/mesa_cua_tif_blanca.jpg"], desc: "Mesa cuadrada imperial con 10 sillas Tiffany blancas." },
-    { id: 63, nombre: "Mesa Cuadrada c/10 Sillas Tiffany Dorada", categoria: "Mesas y Sillas", precio: 1000, fotos: ["img/mesa_cua_tif_dorada.jpg"], desc: "Mesa cuadrada imperial con 10 sillas Tiffany doradas." },
-    { id: 64, nombre: "Mesa Cuadrada c/10 Sillas Tiffany Negra", categoria: "Mesas y Sillas", precio: 1100, fotos: [], desc: "Mesa cuadrada imperial con 10 sillas Tiffany negras." },
-    { id: 65, nombre: "Mesa Cuadrada c/10 Sillas Avant Garden", categoria: "Mesas y Sillas", precio: 1100, fotos: ["img/mesa_cua_avant.jpg"], desc: "Mesa cuadrada imperial con 10 sillas Avant Garden." },
-    { id: 66, nombre: "Mesa Cuadrada c/10 Sillas Crossback", categoria: "Mesas y Sillas", precio: 1400, fotos: ["img/mesa_cua_crossback.jpg"], desc: "Mesa cuadrada imperial con 10 sillas Crossback." },
-
-    // --- Mesa Rústica o Campirana ---
-    { id: 70, nombre: "Mesa Rústica Sola (1.00 x 2.44m)", categoria: "Mesas y Sillas", precio: 800, fotos: ["img/rustica_sola.jpg","img/rustica_sola2.jpg","img/rustica_sola3.jpg"], desc: "Mesa rústica de madera sólida de 1.00 x 2.44m individual." },
-    { id: 71, nombre: "Mesa Rústica / Campirana c/10 Sillas Tiffany Blanca", categoria: "Mesas y Sillas", precio: 1400, fotos: ["img/rustica_tifany_blanca.jpg","img/rustica_tifany_blanca2.jpg","img/rustica_tifany_blanca3.jpg","img/rustica_tifany_blanca4.jpg","img/rustica_tifany_blanca5.jpg"], desc: "Mesa de madera maciza con 10 sillas Tiffany blancas. Incluye camino de mesa a elegir." },
-    { id: 72, nombre: "Mesa Rústica / Campirana c/10 Sillas Tiffany Dorada", categoria: "Mesas y Sillas", precio: 1500, fotos: ["img/rustica_tifany_dorada.jpg"], desc: "Mesa de madera maciza con 10 sillas Tiffany doradas. Incluye camino de mesa a elegir." },
-    { id: 73, nombre: "Mesa Rústica / Campirana c/10 Sillas Tiffany Negra", categoria: "Mesas y Sillas", precio: 1600, fotos: ["img/rustica_tifany_negra.jpg"], desc: "Mesa de madera maciza con 10 sillas Tiffany negras. Incluye camino de mesa a elegir." },
-    { id: 74, nombre: "Mesa Rústica / Campirana c/10 Sillas Avant Garden", categoria: "Mesas y Sillas", precio: 1500, fotos: ["img/rustica_avant.jpg", "img/rustica_avant2.jpg", "img/rustica_avant3.jpg", "img/rustica_avant4.jpg", "img/rustica_avant5.jpg"], desc: "Mesa rústica con 10 sillas Avant Garden. Incluye camino de mesa a elegir." },
-    { id: 75, nombre: "Mesa Rústica / Campirana c/10 Sillas Crossback", categoria: "Mesas y Sillas", precio: 1700, fotos: ["img/rustica_crossback.jpg","img/rustica_crossback2.jpg","img/rustica_crossback3.jpg"], desc: "Mesa rústica con 10 sillas Crossback. Incluye camino de mesa a elegir." },
-
-    // --- Mesas Vintage ---
-    { id: 80, nombre: "Mesa Vintage Rectangular 12p (1.22x2.44m) c/Tiffany Blanca", categoria: "Mesas y Sillas", precio: 1400, fotos: ["img/vintage_tiffany.jpeg"], desc: "Mesa vintage de 1.22x2.44m para 12 personas con sillas Tiffany blancas." },
-    { id: 81, nombre: "Mesa Vintage Rectangular 12p (1.22x2.44m) c/Tiffany Dorada", categoria: "Mesas y Sillas", precio: 1500, fotos: ["img/vintage_tiffany.jpeg"], desc: "Mesa vintage de 1.22x2.44m para 12 personas con sillas Tiffany doradas." },
-    { id: 82, nombre: "Mesa Vintage Rectangular 12p (1.22x2.44m) c/Tiffany Negra", categoria: "Mesas y Sillas", precio: 1600, fotos: ["img/vintage_tiffany.jpeg"], desc: "Mesa vintage de 1.22x2.44m para 12 personas con sillas Tiffany negras." },
-    { id: 83, nombre: "Mesa Vintage Cuadrada 12p (1.70x1.70m) c/Tiffany Blanca", categoria: "Mesas y Sillas", precio: 1400, fotos: ["img/vintage_tiffany.jpeg"], desc: "Mesa vintage cuadrada para 12 personas con sillas Tiffany blancas." },
-    { id: 84, nombre: "Mesa Vintage Cuadrada 12p (1.70x1.70m) c/Tiffany Dorada", categoria: "Mesas y Sillas", precio: 1500, fotos: ["img/vintage_tiffany.jpeg"], desc: "Mesa vintage cuadrada para 12 personas con sillas Tiffany doradas." },
-    { id: 85, nombre: "Mesa Vintage Cuadrada 12p (1.70x1.70m) c/Tiffany Negra", categoria: "Mesas y Sillas", precio: 1600, fotos: ["img/vintage_tiffany.jpeg"], desc: "Mesa vintage cuadrada para 12 personas con sillas Tiffany negras." },
-    { id: 86, nombre: "Mesa Vintage Rectangular 10p (0.75x2.44m) c/Tiffany Blanca", categoria: "Mesas y Sillas", precio: 1200, fotos: ["img/vintage_tiffany.jpeg"], desc: "Mesa vintage de 0.75x2.44m para 10 personas con sillas Tiffany blancas." },
-    { id: 87, nombre: "Mesa Vintage Rectangular 10p (0.75x2.44m) c/Tiffany Dorada", categoria: "Mesas y Sillas", precio: 1300, fotos: [""], desc: "Mesa vintage de 0.75x2.44m para 10 personas con sillas Tiffany doradas." },
-    { id: 88, nombre: "Mesa Vintage Rectangular 10p (0.75x2.44m) c/Tiffany Negra", categoria: "Mesas y Sillas", precio: 1400, fotos: [""], desc: "Mesa vintage de 0.75x2.44m para 10 personas con sillas Tiffany negras." },
+    //{ id: 9, nombre: "Mesa Cuadrada Sola (1.50 x 1.50m)", categoria: "Mesas y Sillas", precio: 250, fotos: ["img/mesa_cua.jpg"], desc: "Mesa cuadrada tipo imperial de 1.50 x 1.50m sola." },
+    { id: 10, nombre: "Mesa Cuadrada c/10 Sillas Acojinadas", categoria: "Mesas y Sillas", precio: 600, fotos: ["img/mesa_cua_aco.jpg"], desc: "Mesa cuadrada imperial con 10 sillas acojinadas." },
+    {
+        id: 11,
+        nombre: "Mesa Cuadrada c/10 Sillas Tiffany",
+        categoria: "Mesas y Sillas",
+        precio: 0,
+        fotos: ["img/mesa_cua_tif_blanca.jpg", "img/mesa_cua_tif_dorada.jpg", "img/Tifanynegra.jpg"],
+        desc:
+            "Mesa Cuadrada c/10 Sillas Tiffany Blanca - 10 personas - $900 MXN\n" +
+            "Mesa Cuadrada c/10 Sillas Tiffany Dorada - 10 personas - $1,000 MXN\n" +
+            "Mesa Cuadrada c/10 Sillas Tiffany Negra - 10 personas - $1,100 MXN"
+    },
+    { id: 12, nombre: "Mesa Cuadrada c/10 Sillas Avant Garden", categoria: "Mesas y Sillas", precio: 1100, fotos: ["img/mesa_cua_avant.jpg"], desc: "Mesa cuadrada imperial con 10 sillas Avant Garden." },
+    { id: 13, nombre: "Mesa Cuadrada c/10 Sillas Crossback", categoria: "Mesas y Sillas", precio: 1400, fotos: ["img/mesa_cua_crossback.jpg"], desc: "Mesa cuadrada imperial con 10 sillas Crossback." },
 
     // --- Mesas Periqueras ---
-    { id: 90, nombre: "Mesa Periquera Sola (4p - 60x60cm)", categoria: "Mesas y Sillas", precio: 350, fotos: ["img/periqueraCN.jpeg"], desc: "Mesa alta individual de 60x60cm para 4 personas." },
-    { id: 91, nombre: "Mesa Periquera Sola (6 u 8p - 1.60x0.65m)", categoria: "Mesas y Sillas", precio: 500, fotos: ["img/periqueraCN.jpeg"], desc: "Mesa alta periquera de 1.60x0.65m para 6 u 8 personas." },
-    { id: 92, nombre: "Banco para Periquera Solo", categoria: "Mesas y Sillas", precio: 100, fotos: ["img/periqueraCN.jpeg"], desc: "Banco alto individual para mesa periquera." },
-    { id: 93, nombre: "Mesa Periquera Vintage / Campirana (4 personas)", categoria: "Mesas y Sillas", precio: 600, fotos: ["img/periqueraCN.jpeg"], desc: "Mesa periquera rústica con 4 bancos incluidos." },
-    { id: 94, nombre: "Mesa Periquera Negra (4 personas)", categoria: "Mesas y Sillas", precio: 700, fotos: ["img/Periquera_negra.jpeg"], desc: "Mesa periquera alta negra con 4 bancos." },
-    { id: 95, nombre: "Mesa Periquera Vintage / Campirana (6 personas)", categoria: "Mesas y Sillas", precio: 750, fotos: ["img/Periquera_vintage.jpeg"], desc: "Mesa periquera de madera con 6 bancos incluidos." },
-    { id: 96, nombre: "Mesa Periquera Negra (6 personas)", categoria: "Mesas y Sillas", precio: 1000, fotos: ["img/Periquera_negra.jpeg", "img/Periquera_negra2.jpeg"], desc: "Juego de mesa alta acabado negro con 6 bancos." },
-    { id: 97, nombre: "Mesa Periquera Vintage / Campirana (8 personas)", categoria: "Mesas y Sillas", precio: 900, fotos: ["img/periqueraCN.jpeg"], desc: "Mesa periquera con 8 bancos de madera." },
-    { id: 98, nombre: "Mesa Periquera Negra (8 personas)", categoria: "Mesas y Sillas", precio: 1200, fotos: ["img/Periquera_negra3.jpeg"], desc: "Mesa periquera alta acabado negro con 8 bancos." },
+    { id: 14, nombre: "Mesa Periquera Vintage / Campirana (4 personas)", categoria: "Mesas y Sillas", precio: 600, fotos: ["img/vintageperi4.jpg", "img/vintageperi42.jpg", "img/vintageperi43.jpg"], desc: "Mesa periquera rústica con 4 bancos incluidos." },
+    { id: 15, nombre: "Mesa Periquera Negra (4 personas)", categoria: "Mesas y Sillas", precio: 700, fotos: ["img/Periquera_negra2.jpeg", "img/Periquera_negra3.jpg"], desc: "Mesa periquera alta negra con 4 bancos." },
+    { id: 16, nombre: "Mesa Periquera Vintage / Campirana (6 personas)", categoria: "Mesas y Sillas", precio: 750, fotos: ["img/perivintage.jpg", "img/vintageperi6.jpg"], desc: "Mesa periquera de madera con 6 bancos incluidos." },
+    { id: 17, nombre: "Mesa Periquera Negra (6 personas)", categoria: "Mesas y Sillas", precio: 1000, fotos: ["img/periquera_negra.jpg", "img/periquera_negra2.jpg", "img/mesa_periquera_negra3.jpeg", "img/perinegra6.jpg"], desc: "Juego de mesa alta acabado negro con 6 bancos." },
+    { id: 18, nombre: "Mesa Periquera Vintage / Campirana (8 personas)", categoria: "Mesas y Sillas", precio: 900, fotos: ["img/vintageperi8.jpg", "img/vintageperi82.jpg"], desc: "Mesa periquera con 8 bancos de madera." },
 
-    // --- Mesas Bar y Bridge ---
-    { id: 100, nombre: "Mesa Bar Sola (80cm de diámetro)", categoria: "Mesas y Sillas", precio: 100, fotos: [""], desc: "Mesa tipo bar redonda individual de 80cm de diámetro." },
-    { id: 101, nombre: "Mesa Bar Redonda c/4 Sillas Acojinadas", categoria: "Mesas y Sillas", precio: 200, fotos: [""], desc: "Mesa bar redonda con 4 sillas acojinadas." },
-    { id: 102, nombre: "Mesa Bar Redonda c/4 Sillas Tiffany Blanca", categoria: "Mesas y Sillas", precio: 400, fotos: [""], desc: "Mesa bar redonda con 4 sillas Tiffany blancas." },
-    { id: 103, nombre: "Mesa Bar Redonda c/4 Sillas Tiffany Dorada", categoria: "Mesas y Sillas", precio: 500, fotos: [""], desc: "Mesa bar redonda con 4 sillas Tiffany doradas." },
-    { id: 104, nombre: "Mesa Bar Redonda c/4 Sillas Tiffany Negra", categoria: "Mesas y Sillas", precio: 600, fotos: [""], desc: "Mesa bar redonda con 4 sillas Tiffany negras." },
-    { id: 105, nombre: "Mesa Bridge Sola", categoria: "Mesas y Sillas", precio: 100, fotos: [], desc: "Mesa cuadrada tipo bridge sola." },
-    { id: 106, nombre: "Mesa Bridge Cuadrada c/4 Sillas Acojinadas", categoria: "Mesas y Sillas", precio: 220, fotos: [], desc: "Mesa bridge cuadrada con 4 sillas acojinadas." },
-    { id: 107, nombre: "Mesa Bridge Cuadrada c/4 Sillas Tiffany Blanca", categoria: "Mesas y Sillas", precio: 400, fotos: [], desc: "Mesa bridge cuadrada con 4 sillas Tiffany blancas." },
-    { id: 108, nombre: "Mesa Bridge Cuadrada c/4 Sillas Tiffany Dorada", categoria: "Mesas y Sillas", precio: 500, fotos: [], desc: "Mesa bridge cuadrada con 4 sillas Tiffany doradas." },
-    { id: 109, nombre: "Mesa Bridge Cuadrada c/4 Sillas Tiffany Negra", categoria: "Mesas y Sillas", precio: 600, fotos: [], desc: "Mesa bridge cuadrada con 4 sillas Tiffany negras." },
+    // --- Mesas Redondas ---
+    { id: 19, nombre: "Mesa Redonda c/10 Sillas Acojinadas", categoria: "Mesas y Sillas", precio: 350, fotos: ["img/redonda_acojinada.jpeg"], desc: "Mesa redonda para 10 personas con 10 sillas acojinadas." },
+    {
+        id: 20,
+        nombre: "Mesa Redonda c/10 Sillas Tiffany",
+        categoria: "Mesas y Sillas",
+        precio: 0,
+        fotos: ["img/redonda_tiffany_blanca.jpg", "img/redonda_tiffany_blanca2.jpg", "img/tiffanyDorada.jpeg", "img/redondatiffany.jpeg", "img/redondatiffany1.jpg", "img/redondatiffany2.jpg", "img/redondatiffany3.jpg", "img/redondatiffany4.jpg", "img/redondatiffany5.jpg", "img/redondatiffany6.jpg"],
+        desc:
+            "Mesa Redonda c/10 Sillas Tiffany Blanca - 10 personas - $600 MXN\n" +
+            "Mesa Redonda c/10 Sillas Tiffany Dorada - 10 personas - $700 MXN\n" +
+            "Mesa Redonda c/10 Sillas Tiffany Negra - 10 personas - $850 MXN"
+    },
+    { id: 21, nombre: "Mesa Redonda c/10 Sillas Avant Garden", categoria: "Mesas y Sillas", precio: 900, fotos: ["img/avant_garden.jpeg", "img/avant_garden2.jpeg", "img/avant_garden3.jpeg", "img/avant_garden4.jpg", "img/avant_garden5.jpg", "img/avant_garden6.jpg", "img/avant_garden7.jpg", "img/avant_garden8.jpg"], desc: "Mesa redonda para 10 personas con 10 sillas Avant Garden." },
+    { id: 22, nombre: "Mesa Redonda c/10 Sillas Crossback", categoria: "Mesas y Sillas", precio: 1000, fotos: ["img/redondacrossback.jpeg", "img/redondacrossback2.jpeg"], desc: "Mesa redonda con 10 sillas de madera Crossback." },
+    { id: 23, nombre: "Mesa Redonda Vestida", categoria: "Mesas y Sillas", precio: 450, fotos: ["img/redonda_vestida.jpg", "img/redonda_vestida2.jpg", "img/redonda_vestida3.jpg"], desc: "Incluye mantel blanco, banda de color, cubremantel, funda blanca para sillas y 10 sillas acojinadas." },
+
+    // --- Mesas Redondas con Sombrilla ---
+    {
+        id: 24,
+        nombre: "Mesa Redondas c/Sombrilla y Sillas",
+        categoria: "Mesas y Sillas",
+        precio: 0,
+        fotos: [
+            "img/tifanny_blanca_sombra.jpg",
+            "img/tifanny_blanca_sombra2.jpg",
+            "img/tifanny_blanca_sombra3.jpg",
+            "img/crossback_sombra.jpg",
+            "img/crossback_sombra2.jpg",
+            "img/acojinada_sombra.jpg",
+            "img/acojinada_sombra2.jpg"
+        ],
+        desc:
+            "Mesa Redonda c/Sombrilla y 10 Sillas Tiffany Blanca - $800 MXN\n" +
+            "Mesa Redonda c/Sombrilla y 10 Sillas Tiffany Dorada - $900 MXN\n" +
+            "Mesa Redonda c/Sombrilla y 10 Sillas Tiffany Negra - $1,000 MXN\n" +
+            "Mesa Redonda c/Sombrilla y 10 Sillas Avant Garden - $900 MXN\n" +
+            "Mesa Redonda c/Sombrilla y 10 Sillas Crossback - $1,100 MXN\n" +
+            "Mesa Redonda c/Sombrilla y 10 Sillas Acojinadas - $600 MXN\n"
+    },
+    { id: 25, nombre: "Sombrilla con Base", categoria: "Mesas y Sillas", precio: 250, fotos: ["img/sombrilla.jpg"], desc: "Sombrilla individual para exterior incluye su base firme." },
+    { id: 26, nombre: "Base de Sombrilla", categoria: "Mesas y Sillas", precio: 100, fotos: ["img/base_sombrilla.jpg"], desc: "Base firme para sombrilla individual." },
+
+    // --- Mesas Bar Agrupadas ---
+    {
+        id: 27,
+        nombre: "Mesas Bar (Redondas y Sola)",
+        categoria: "Mesas y Sillas",
+        precio: 0,
+        fotos: [
+            "img/bar_aco.jpeg"
+        ],
+        desc:
+            "Mesa Bar Sola - 80 cm diámetro - $100 MXN\n" +
+            "Mesa Bar Redonda c/4 Sillas Acojinadas - 4 personas - $200 MXN\n" +
+            "Mesa Bar Redonda c/4 Sillas Tiffany Blanca - 4 personas - $400 MXN\n" +
+            "Mesa Bar Redonda c/4 Sillas Tiffany Dorada - 4 personas - $500 MXN\n" +
+            "Mesa Bar Redonda c/4 Sillas Tiffany Negra - 4 personas - $600 MXN"
+    },
 
     // --- Mesas Infantiles ---
-    { id: 115, nombre: "Tabloncito Infantil c/10 Sillas Acojinadas o Plásticas", categoria: "Mesas y Sillas", precio: 250, fotos: ["img/mesa_infantil_acolchonada.jpg"], desc: "Mesa infantil baja con 10 sillitas para niños." },
-    { id: 116, nombre: "Tabloncito Infantil c/10 Sillas Tiffany", categoria: "Mesas y Sillas", precio: 400, fotos: [], desc: "Mesa infantil baja con 10 sillitas Tiffany." },
-    { id: 117, nombre: "Silla Infantil Sola", categoria: "Mesas y Sillas", precio: 10, fotos: ["img/infantil_sola.jpg"], desc: "Sillita individual para niños (acojinada o plástica)." },
-    { id: 118, nombre: "Silla Tiffany Infantil (pza)", categoria: "Mesas y Sillas", precio: 35, fotos: ["img/infantil_tifany.jpg"], desc: "Sillita individual Tiffany tamaño infantil." },
+    { id: 28, nombre: "Tabloncito Infantil c/10 Sillas Acojinadas o Plásticas", categoria: "Mesas y Sillas", precio: 250, fotos: ["img/mesa_infantil_acolchonada.jpg"], desc: "Mesa infantil baja con 10 sillitas para niños." },
+    { id: 29, nombre: "Silla Infantil Sola", categoria: "Mesas y Sillas", precio: 10, fotos: ["img/infantil_sola.jpg"], desc: "Sillita individual para niños (acojinada o plástica)." },
 
     // --- Sillas Solas ---
-    { id: 120, nombre: "Silla Acojinada", categoria: "Mesas y Sillas", precio: 25, fotos: ["img/Silla_Acojinada.jpeg"], desc: "Precio por pieza. Silla plegable con asiento y respaldo acojinado." },
-    { id: 121, nombre: "Silla Tiffany Blanca", categoria: "Mesas y Sillas", precio: 45, fotos: ["img/tiffany_blanca.jpg"], desc: "Precio por pieza. Silla Tiffany blanca incluye cojín." },
-    { id: 122, nombre: "Silla Tiffany Dorada", categoria: "Mesas y Sillas", precio: 60, fotos: ["img/Silla_tiffany_dorada.jpeg", "img/tiffanyDorada.jpeg"], desc: "Precio por pieza. Silla Tiffany dorada incluye cojín." },
-    { id: 123, nombre: "Silla Tiffany Negra", categoria: "Mesas y Sillas", precio: 80, fotos: [], desc: "Precio por pieza. Silla Tiffany negra de gala incluye cojín." },
-    { id: 124, nombre: "Silla Avant Garden", categoria: "Mesas y Sillas", precio: 60, fotos: ["img/silla_avant.jpg"], desc: "Precio por pieza. Silla plegable de madera blanca con cojín." },
-    { id: 125, nombre: "Silla Crossback", categoria: "Mesas y Sillas", precio: 100, fotos: ["img/Silla_crossback.jpeg"], desc: "Precio por pieza. Silla de madera rústica con respaldo cruzado en X." },
+    { id: 30, nombre: "Silla Acojinada", categoria: "Mesas y Sillas", precio: 25, fotos: ["img/Silla_Acojinada.jpeg"], desc: "Precio por pieza. Silla plegable con asiento y respaldo acojinado." },
+    { id: 31, nombre: "Silla Tiffany Blanca", categoria: "Mesas y Sillas", precio: 45, fotos: ["img/tiffany_blanca.jpg"], desc: "Precio por pieza. Silla Tiffany blanca incluye cojín." },
+    { id: 32, nombre: "Silla Tiffany Dorada", categoria: "Mesas y Sillas", precio: 60, fotos: ["img/Silla_tiffany_dorada.jpeg", "img/tiffanyDorada.jpeg"], desc: "Precio por pieza. Silla Tiffany dorada incluye cojín." },
+    { id: 33, nombre: "Silla Tiffany Negra", categoria: "Mesas y Sillas", precio: 80, fotos: ["img/sillatiffanynegra.jpeg"], desc: "Precio por pieza. Silla Tiffany negra de gala incluye cojín." },
+    { id: 34, nombre: "Silla Avant Garden", categoria: "Mesas y Sillas", precio: 60, fotos: ["img/silla_avant.jpg"], desc: "Precio por pieza. Silla plegable de madera blanca con cojín." },
+    { id: 35, nombre: "Silla Crossback", categoria: "Mesas y Sillas", precio: 100, fotos: ["img/Silla_crossback.jpeg"], desc: "Precio por pieza. Silla de madera rústica con respaldo cruzado en X." },
 
     // ==================== 3. SALA LOUNGE ====================
-    { id: 130, nombre: "Sala Lounge (10 piezas)", categoria: "Sala Lounge", precio: 1500, fotos: ["img/lounge.jpg", "img/lounge (1).jpg", "img/lounge (2).jpg", "img/lounge (3).jpg", "img/lounge (4).jpg", "img/lounge (5).jpg"], desc: "Juego completo tipo lounge para 10 personas con sillones modulares, taburetes y mesa de centro iluminada." },
+    { id: 36, nombre: "Sala Lounge (10 piezas)", categoria: "Sala Lounge", precio: 1500, fotos: ["img/lounge (4).jpg", "img/lounge (5).jpg", "img/lounge (1).jpg", "img/lounge (2).jpg", "img/lounge (3).jpg"], desc: "Juego completo tipo lounge para 10 personas con sillones modulares, taburetes y mesa de centro iluminada." },
 
     // ==================== 4. LONAS ====================
-    { id: 1, nombre: "Lona Blanca 5 x 6 m", categoria: "Lonas", precio: 1000, fotos: ["img/lona (12).jpg"], desc: "Lona blanca uso rudo impermeable de 5x6m. Incluye estructura y montaje." },
-    { id: 2, nombre: "Lona Blanca 8 x 7 m", categoria: "Lonas", precio: 1500, fotos: ["img/lona (14).jpg"], desc: "Lona blanca impermeable de 8x7m. Estructura y montaje incluidos." },
-    { id: 3, nombre: "Lona Blanca 10 x 6 m", categoria: "Lonas", precio: 1900, fotos: ["img/lona (13).jpg"], desc: "Lona blanca impermeable de 10x6m para eventos." },
-    { id: 4, nombre: "Lona Blanca 10 x 8 m", categoria: "Lonas", precio: 2000, fotos: ["img/lona (15).jpg"], desc: "Lona blanca impermeable de 10x8m. Excelente cobertura." },
-    { id: 5, nombre: "Lona Blanca 10 x 10 m", categoria: "Lonas", precio: 2200, fotos: ["img/lona (18).jpg"], desc: "Lona blanca de 10x10m (100 m² de sombra)." },
-    { id: 6, nombre: "Lona Blanca 10 x 12 m", categoria: "Lonas", precio: 3200, fotos: ["img/lona (21).jpg"], desc: "Lona blanca de gran formato 10x12m." },
-    { id: 7, nombre: "Lona Blanca 10 x 15 m", categoria: "Lonas", precio: 3500, fotos: ["img/lona (25).jpg"], desc: "Lona blanca máxima capacidad de 10x15m (150 m²)." },
+    { id: 37, nombre: "Lona Blanca 5 x 6 m", categoria: "Lonas", precio: 1000, fotos: ["img/lona5.jpg"], desc: "Lona blanca uso rudo impermeable de 5x6m. Incluye estructura y montaje." },
+    { id: 38, nombre: "Lona Blanca 8 x 7 m", categoria: "Lonas", precio: 1500, fotos: ["img/lona8x7.jpeg"], desc: "Lona blanca impermeable de 8x7m. Estructura y montaje incluidos." },
+    { id: 39, nombre: "Lona Blanca 10 x 6 m", categoria: "Lonas", precio: 1900, fotos: ["img/lona (13).jpg"], desc: "Lona blanca impermeable de 10x6m para eventos." },
+    { id: 40, nombre: "Lona Blanca 10 x 8 m", categoria: "Lonas", precio: 2000, fotos: ["img/lona (15).jpg"], desc: "Lona blanca impermeable de 10x8m. Excelente cobertura." },
+    { id: 41, nombre: "Lona Blanca 10 x 10 m", categoria: "Lonas", precio: 2200, fotos: ["img/lona (18).jpg"], desc: "Lona blanca de 10x10m (100 m² de sombra)." },
+    { id: 42, nombre: "Lona Blanca 10 x 12 m", categoria: "Lonas", precio: 3200, fotos: ["img/lona (21).jpg"], desc: "Lona blanca de gran formato 10x12m." },
+    { id: 43, nombre: "Lona Blanca 10 x 15 m", categoria: "Lonas", precio: 3500, fotos: ["img/lona (25).jpg"], desc: "Lona blanca máxima capacidad de 10x15m (150 m²)." },
 
     // ==================== 5. MANTELERÍA ====================
-    { id: 140, nombre: "Mantel Blanco Tablón", categoria: "Mantelería", precio: 50, fotos: ["img/tabloon_acojina.jpeg"], desc: "Mantel rectangular blanco para tablón de 2.40m." },
-    { id: 141, nombre: "Mantel Blanco Redondo", categoria: "Mantelería", precio: 60, fotos: ["img/redonda_acojinada.jpeg"], desc: "Mantel blanco circular para mesa redonda." },
-    { id: 142, nombre: "Cubremantel", categoria: "Mantelería", precio: 40, fotos: ["img/redondatiffany.jpeg"], desc: "Cubremantel cuadrado para sobreponer (varios colores a elegir)." },
-    { id: 143, nombre: "Mantel de Color Tablón", categoria: "Mantelería", precio: 60, fotos: ["img/tabloon_acojina.jpeg"], desc: "Mantel rectangular en diversos colores." },
-    { id: 144, nombre: "Mantel de Color Redondo", categoria: "Mantelería", precio: 70, fotos: ["img/redondatiffany.jpeg"], desc: "Mantel circular en diversos colores." },
-    { id: 145, nombre: "Mantel Versalles", categoria: "Mantelería", precio: 150, fotos: ["img/vintage_tiffany.jpeg"], desc: "Mantel con diseño y textura fina de gala." },
-    { id: 146, nombre: "Servilleta de Tela (pza)", categoria: "Mantelería", precio: 8, fotos: ["img/cubiertos.jpeg"], desc: "Servilleta de tela lavada y planchada." },
-    { id: 147, nombre: "Bambalinas", categoria: "Mantelería", precio: 200, fotos: ["img/tabloon_acojina.jpeg"], desc: "Faldón perimetral decorativo para mesas principales." },
-    { id: 148, nombre: "Funda para Silla", categoria: "Mantelería", precio: 15, fotos: ["img/Silla_Acojinada.jpeg"], desc: "Funda de tela blanca adaptable a silla." },
-    { id: 149, nombre: "Banda / Moño para Sillas", categoria: "Mantelería", precio: 10, fotos: ["img/Silla_Acojinada.jpeg"], desc: "Banda de color para respaldo de silla." },
-    { id: 150, nombre: "Camino para Mesa", categoria: "Mantelería", precio: 50, fotos: ["img/campirana_crossback.jpeg"], desc: "Tira central decorativa de tela para mesas." },
-    { id: 151, nombre: "Mantel Mesa Bar", categoria: "Mantelería", precio: 50, fotos: ["img/tabloon_acojina.jpeg"], desc: "Mantel ajustable especial para mesa coctelera o de bar." },
+    { id: 44, nombre: "Mantel Blanco Tablón", categoria: "Mantelería", precio: 50, fotos: ["img/tablonblanco.jpg"], desc: "Mantel rectangular blanco para tablón de 2.40m." },
+    { id: 45, nombre: "Mantel Blanco Redondo", categoria: "Mantelería", precio: 60, fotos: ["img/redondoblanco.jpg"], desc: "Mantel blanco circular para mesa redonda." },
+    { id: 46, nombre: "Cubremantel", categoria: "Mantelería", precio: 40, fotos: ["img/cubremantel.png", "img/cubremantel2.png"], desc: "Cubremantel cuadrado para sobreponer (varios colores a elegir)." },
+    { id: 47, nombre: "Mantel de Color Tablón", categoria: "Mantelería", precio: 60, fotos: ["img/mantel_color.jpeg"], desc: "Mantel rectangular en diversos colores." },
+    { id: 48, nombre: "Mantel de Color Redondo", categoria: "Mantelería", precio: 70, fotos: ["img/redondocolor.jpg", "img/redondocolor2.jpg", "img/redondocolor3.jpg"], desc: "Mantel circular en diversos colores." },
+    { id: 49, nombre: "Servilleta de Tela (pza)", categoria: "Mantelería", precio: 8, fotos: ["img/servilletas.png"], desc: "Servilleta de tela lavada y planchada." },
+    { id: 50, nombre: "Banda / Moño para Sillas", categoria: "Mantelería", precio: 10, fotos: ["img/banda.png", "img/banda2.png"], desc: "Banda de color para respaldo de silla." },
+    { id: 51, nombre: "Camino para Mesa", categoria: "Mantelería", precio: 50, fotos: ["img/camino.png", "img/camino2.png", "img/camino3.png", "img/camino4.png", "img/camino5.png", "img/camino6.png", "img/camino7.png", "img/camino8.png", "img/camino9.png", "img/camino10.png"], desc: "Tira central decorativa de tela para mesas." },
 
     // ==================== 6. CRISTALERÍA (POR PIEZA) ====================
-    { id: 160, nombre: "Platos (Trinche / Postre / Pastelero / Hondo)", categoria: "Cristalería", precio: 13, fotos: ["img/Plato_trinche.jpeg"], desc: "Precio por pieza a elegir en losa blanca de gala." },
-    { id: 161, nombre: "Plato Base Plateado", categoria: "Cristalería", precio: 12, fotos: ["img/Plato_trinche.jpeg"], desc: "Plato base decorativo plateado para montaje de mesas." },
-    { id: 162, nombre: "Cubiertos Plateados (Tenedor / Cuchara / Cuchillo / Cucharita)", categoria: "Cristalería", precio: 6, fotos: ["img/cubiertos.jpeg"], desc: "Precio por pieza en acero inoxidable." },
-    { id: 163, nombre: "Cubiertos Dorados (Tenedor / Cuchara / Cuchillo / Cucharita)", categoria: "Cristalería", precio: 12, fotos: ["img/cubiertos_dorados.jpeg"], desc: "Precio por pieza individual con fino acabado oro." },
-    { id: 164, nombre: "Vaso de Vidrio (pza)", categoria: "Cristalería", precio: 8, fotos: ["img/vaso.jpeg"], desc: "Vaso de vidrio cristalino estándar." },
-    { id: 165, nombre: "Vaso Old Fashion (pza)", categoria: "Cristalería", precio: 15, fotos: ["img/Caso_oldfashon.jpeg"], desc: "Vaso bajo tipo rocas para whisky o licores." },
-    { id: 166, nombre: "Copas para Vino (pza)", categoria: "Cristalería", precio: 18, fotos: ["img/Copa_Globo.jpeg"], desc: "Copa de cristal tradicional para agua o vino." },
-    { id: 167, nombre: "Copa de Color (Azul / Verde / Humo / Amarillo / Rosa)", categoria: "Cristalería", precio: 30, fotos: ["img/copa_color_Rosa_Purpura.jpeg", "img/copa_color_Rosa_Purpura2.jpeg", "img/copa_color_Humo.jpeg", "img/copa_color.jpeg"], desc: "Copa labrada en cristal de color a elegir (azul, verde, humo, amarillo o rosa)." },
-    { id: 168, nombre: "Plato y Taza para Café", categoria: "Cristalería", precio: 25, fotos: ["img/Taza_con_plato.jpeg"], desc: "Juego de taza de cerámica con plato cafetero." },
-    { id: 169, nombre: "Porta Sobres (pza)", categoria: "Cristalería", precio: 15, fotos: ["img/vaso.jpeg"], desc: "Recipiente para sobres de azúcar y té." },
-    { id: 170, nombre: "Ceniceros (pza)", categoria: "Cristalería", precio: 10, fotos: ["img/vaso.jpeg"], desc: "Cenicero de cristal grueso para mesas." },
-    { id: 171, nombre: "Chafer / Bufetera (pza)", categoria: "Cristalería", precio: 300, fotos: ["img/Plato_trinche.jpeg"], desc: "Mantenedor térmico de alimentos a baño maría con quemadores." },
-    { id: 172, nombre: "Charola de Servicio", categoria: "Cristalería", precio: 50, fotos: ["img/cubiertos.jpeg"], desc: "Charola antiderrapante para mesero." },
-    { id: 173, nombre: "Cafetera Industrial", categoria: "Cristalería", precio: 350, fotos: ["img/Taza_con_plato.jpeg"], desc: "Cafetera percoladora de alta capacidad." },
-    { id: 174, nombre: "Tijeras para Charola", categoria: "Cristalería", precio: 25, fotos: ["img/cubiertos.jpeg"], desc: "Soporte tipo tijera plegable para charola de mesero." },
+    { id: 52, nombre: "Platos (Trinche / Postre / Pastelero / Hondo)", categoria: "Cristalería", precio: 13, fotos: ["img/Plato_trinche.jpeg"], desc: "Precio por pieza a elegir en losa blanca de gala." },
+    { id: 53, nombre: "Plato Base Plateado", categoria: "Cristalería", precio: 12, fotos: ["img/vaso.jpeg"], desc: "Plato base decorativo plateado para montaje de mesas." },
+    { id: 54, nombre: "Cubiertos Plateados (Tenedor / Cuchara / Cuchillo / Cucharita)", categoria: "Cristalería", precio: 6, fotos: ["img/cubiertos.jpeg"], desc: "Precio por pieza en acero inoxidable." },
+    { id: 55, nombre: "Cubiertos Dorados (Tenedor / Cuchara / Cuchillo / Cucharita)", categoria: "Cristalería", precio: 12, fotos: ["img/cubiertos_dorados.jpeg"], desc: "Precio por pieza individual con fino acabado oro." },
+    { id: 56, nombre: "Vaso de Vidrio (pza)", categoria: "Cristalería", precio: 8, fotos: ["img/vaso.jpeg", "img/Caso_oldfashon.jpeg", "img/Copa_Globo.jpeg"], desc: "Vaso de vidrio cristalino estándar." },
+    { id: 57, nombre: "Vaso Old Fashion (pza)", categoria: "Cristalería", precio: 15, fotos: ["img/Caso_oldfashon.jpeg"], desc: "Vaso bajo tipo rocas para whisky o licores." },
+    { id: 58, nombre: "Copas para Vino (pza)", categoria: "Cristalería", precio: 18, fotos: ["img/Copa_Globo.jpeg"], desc: "Copa de cristal tradicional para agua o vino." },
+    { id: 59, nombre: "Copa de Color (Azul / Verde / Humo / Amarillo / Rosa)", categoria: "Cristalería", precio: 30, fotos: ["img/copa_color_Rosa_Purpura.jpeg", "img/copa_color_Rosa_Purpura2.jpeg", "img/copa_color_Humo.jpeg", "img/copa_color.jpeg"], desc: "Copa labrada en cristal de color a elegir (azul, verde, humo, amarillo o rosa)." },
+    { id: 60, nombre: "Plato y Taza para Café", categoria: "Cristalería", precio: 25, fotos: ["img/Taza_con_plato.jpeg"], desc: "Juego de taza de cerámica con plato cafetero." },
+    { id: 61, nombre: "Chafer / Bufetera (pza)", categoria: "Cristalería", precio: 300, fotos: ["img/asadorG.jpg", "img/asadorG2.jpg"], desc: "Mantenedor térmico de alimentos a baño maría con quemadores." },
 
     // ==================== 7. TEMPLETES Y PISOS ====================
-    { id: 180, nombre: "Tarima de Madera (por m²)", categoria: "Templetes", precio: 120, fotos: ["img/Mesa_California.jpeg"], desc: "Tarima de madera nivelada para piso firme (precio por m²)." },
-    { id: 181, nombre: "Pista Iluminada LED (por m²)", categoria: "Templetes", precio: 350, fotos: ["img/bodaxv.jpeg"], desc: "Pista de baile acrílica con iluminación LED programable (precio por m²)." },
-    { id: 182, nombre: "Templete (Altura 50 cm - por m²)", categoria: "Templetes", precio: 300, fotos: ["img/Mesa_California.jpeg"], desc: "Estructura de templete o escenario a 50 cm de altura (precio por m²)." },
+    { id: 62, nombre: "Tarima de Madera (por m²)", categoria: "Templetes", precio: 120, fotos: ["img/tarima.jpeg", "img/templete3.jpg", "img/templete4.jpg"], desc: "Tarima de madera nivelada para piso firme (precio por m²)." },
+    { id: 63, nombre: "Templete (Altura 50 cm - por m²)", categoria: "Templetes", precio: 300, fotos: ["img/templete.jpeg", "img/templete2.jpeg"], desc: "Estructura de templete o escenario a 50 cm de altura (precio por m²)." },
 
     // ==================== 8. OTROS (EQUIPO Y SERVICIOS) ====================
-    { id: 190, nombre: "Calentador Ambiental", categoria: "Otros", precio: 1300, fotos: ["img/calentador.jpg", "img/calentador2.jpg", "img/calentador3.jpg", "img/calentador4.jpg", "img/calentador5.jpg"], desc: "Calentador tipo hongo a gas para jardín o terraza." },
-    { id: 191, nombre: "Sombrilla Individual", categoria: "Otros", precio: 180, fotos: ["img/sombrilla.jpg", "img/sombrilla 2.jpg"], desc: "Sombrilla para intemperie individual." },
-    { id: 192, nombre: "Hielera Grande", categoria: "Otros", precio: 250, fotos: [], desc: "Hielera térmica de gran capacidad para enfriar bebidas." },
-    { id: 193, nombre: "Reflector de Iluminación", categoria: "Otros", precio: 200, fotos: [], desc: "Reflector LED de alta potencia para exteriores." },
-    { id: 194, nombre: "Bocina Bluetooth", categoria: "Otros", precio: 800, fotos: [], desc: "Bafle de audio amplificado con tripié y conectividad Bluetooth." },
-    { id: 195, nombre: "Meseros (x 5 horas)", categoria: "Otros", precio: 600, fotos: [], desc: "Personal de servicio capacitado y uniformado por 5 horas de evento." },
-    { id: 196, nombre: "Asador Grande", categoria: "Otros", precio: 600, fotos: ["img/asadorG.jpg", "img/asadorG2.jpg"], desc: "Asador amplio para parrilladas y eventos." },
-    { id: 197, nombre: "Mesa de Futbolito", categoria: "Otros", precio: 1000, fotos: [], desc: "Mesa de futbolito profesional para entretenimiento de invitados." },
-    { id: 198, nombre: "Guirnalda de Luces", categoria: "Otros", precio: 300, fotos: [], desc: "Tira decorativa con focos de luz cálida para ambientación." },
-    { id: 199, nombre: "Inflable (3 x 4 m)", categoria: "Otros", precio: 600, fotos: [], desc: "Juego inflable infantil de 3x4m incluye motor y montaje." }
+    { id: 64, nombre: "Calentador Ambiental", categoria: "Otros", precio: 1300, fotos: ["img/calentador.jpg", "img/calentador2.jpg", "img/calentador3.jpg", "img/calentador4.jpg", "img/calentador5.jpg"], desc: "Calentador tipo hongo a gas para jardín o terraza." },
+    { id: 65, nombre: "Sombrilla Individual", categoria: "Otros", precio: 180, fotos: ["img/sombrilla.jpg", "img/sombrilla 2.jpg"], desc: "Sombrilla para intemperie individual." },
+    { id: 66, nombre: "Meseros (x 5 horas)", categoria: "Otros", precio: 600, fotos: ["img/meseros.jpeg"], desc: "Personal de servicio capacitado y uniformado por 5 horas de evento." },
+    { id: 67, nombre: "Mesa de Futbolito", categoria: "Otros", precio: 1000, fotos: ["img/futbolito.jpg"], desc: "Mesa de futbolito profesional para entretenimiento de invitados." },
+    { id: 68, nombre: "Inflable (3 x 4 m)", categoria: "Otros", precio: 600, fotos: ["img/inflable.jpg", "img/inflable2.jpg", "img/inflable3.jpg"], desc: "Juego inflable infantil de 3x4m incluye motor y montaje." }
 ];
 
 let categoriaActual = "Todos";
@@ -227,7 +300,9 @@ function renderCatalog() {
         </div>
         <div class="p-4 text-center">
           <h4 class="font-bold text-stone-800 text-sm leading-tight group-hover:text-blue-900 transition">${prod.nombre}</h4>
-          <p class="text-blue-950 font-extrabold text-base mt-2">$${prod.precio.toLocaleString()} MXN</p>
+          <p class="text-blue-950 font-extrabold text-base mt-2">
+            ${prod.precio > 0 ? `$${prod.precio.toLocaleString()} MXN` : 'Precio a Cotizar'}
+          </p>
         </div>
       </div>
     `;
@@ -244,8 +319,37 @@ function abrirDetalle(id) {
 
     document.getElementById("modal-cat").textContent = prod.categoria;
     document.getElementById("modal-title").textContent = prod.nombre;
-    document.getElementById("modal-price").textContent = `$${prod.precio.toLocaleString()} MXN`;
-    document.getElementById("modal-desc").textContent = prod.desc || "Consulta disponibilidad, medidas y flete por WhatsApp.";
+    document.getElementById("modal-price").textContent = prod.precio > 0 ? `$${prod.precio.toLocaleString()} MXN` : "Precio a Cotizar";
+
+    // Renderizado con formato de lista/tabla para descripciones multilínea
+    const descEl = document.getElementById("modal-desc");
+    if (prod.desc && prod.desc.includes("\n")) {
+        const lineas = prod.desc.split("\n").filter(l => l.trim() !== "");
+        descEl.innerHTML = `
+            <div class="flex flex-col gap-1.5 text-xs max-h-64 overflow-y-auto pr-1">
+                ${lineas.map(linea => {
+            const partes = linea.split(" - ");
+            if (partes.length >= 3) {
+                const [nombre, medida, precio] = partes;
+                return `
+                            <div class="flex items-center justify-between p-2 rounded-lg bg-stone-100/80 border border-stone-200">
+                                <div class="text-left">
+                                    <span class="font-bold text-stone-800">${nombre}</span>
+                                    <span class="text-stone-500 font-medium ml-1">(${medida})</span>
+                                </div>
+                                <span class="font-extrabold ${precio.includes('cotizar') ? 'text-amber-700' : 'text-blue-950'} whitespace-nowrap ml-2">
+                                    ${precio}
+                                </span>
+                            </div>
+                        `;
+            }
+            return `<div class="p-1 text-stone-600">${linea}</div>`;
+        }).join('')}
+            </div>
+        `;
+    } else {
+        descEl.textContent = prod.desc || "Consulta disponibilidad, medidas y flete por WhatsApp.";
+    }
 
     actualizarFotoCarrusel();
     document.getElementById("product-modal").classList.remove("hidden");
