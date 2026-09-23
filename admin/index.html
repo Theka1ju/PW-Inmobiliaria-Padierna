@@ -6,78 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Panel de Control | Alquiladora GM Padierna</title>
 
-    <!-- Netlify Identity -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
     <style>
-        /* Ocultar botones técnicos que puedan asustar o causar accidentes */
-        /* Oculta la vista dividida Markdown/Preview técnica innecesaria */
-        [class*="SplitPane"]>div:last-child {
-            display: none !important;
-        }
-
-        [class*="SplitPane"]>div:first-child {
-            width: 100% !important;
-        }
-
-        /* Estilizar la barra superior */
+        /* Encabezado con color institucional */
         [class*="AppHeaderContent"] {
             background-color: #1E3D9A !important;
         }
 
-        /* Resaltar el botón Guardar */
+        /* Botón de guardar destacado */
         button[class*="SaveButton"] {
             background-color: #10B981 !important;
-            font-size: 14px !important;
             font-weight: bold !important;
-            border-radius: 8px !important;
         }
 
-        /* Transforma la tarjeta abierta en un cuadro enfocado y limpio */
-        [class*="ListItemControl"]:focus-within {
-            background: #ffffff !important;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15) !important;
-            border: 2px solid #1E3D9A !important;
-            border-radius: 12px !important;
-            padding: 12px !important;
+        /* Ocultar el panel de previsualización derecho técnico para no confundir al cliente */
+        [class*="SplitPane"] > div:last-child {
+            display: none !important;
+        }
+        [class*="SplitPane"] > div:first-child {
+            width: 100% !important;
+        }
+
+        /* Cuadro de miniatura de imagen */
+        [class*="ImageWrapper"] img,
+        img[class*="StyledImage"] {
+            object-fit: contain !important;
+            background-color: #ffffff !important;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
         }
     </style>
 </head>
 
 <body>
-    <!-- Carga del CMS -->
+    <!-- Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 
-    <!-- Configuración de Idioma Español -->
     <script>
+        // Registro de textos en español
         CMS.registerLocale('es', {
             auth: {
                 login: 'Iniciar Sesión',
                 loggingIn: 'Iniciando sesión...',
                 loginWithNetlifyIdentity: 'Entrar con correo y contraseña'
             },
-            app: {
-                header: {
-                    quickAdd: 'Crear nuevo'
-                }
-            },
-            collection: {
-                collectionTop: {
-                    sortByLabel: 'Ordenar por',
-                    viewAs: 'Vista'
-                },
-                entries: {
-                    emptyCollection: 'No hay elementos registrados'
-                }
-            },
             editor: {
-                editorControlPane: {
-                    widget: {
-                        list: {
-                            add: '+ Agregar nuevo producto'
-                        }
-                    }
-                },
                 editorToolbar: {
                     publish: 'Guardar Cambios en la Web',
                     publishing: 'Guardando...',
@@ -85,6 +59,27 @@
                 }
             }
         });
+
+        // Script para reparar miniaturas con blob roto
+        // Si Decap asigna un blob vacío, recupera la ruta textual original y fuerza la URL estática
+        const observer = new MutationObserver(() => {
+            const previewImages = document.querySelectorAll('img[src^="blob:"]');
+            previewImages.forEach(img => {
+                // Si la imagen no ha cargado dimensiones o tiene error
+                if (img.naturalWidth === 0) {
+                    const container = img.closest('[class*="ControlContainer"]');
+                    if (container) {
+                        const inputOrText = container.querySelector('input') || container.querySelector('span');
+                        const path = inputOrText ? inputOrText.value || inputOrText.textContent : '';
+                        if (path && (path.endsWith('.jpg') || path.endsWith('.jpeg') || path.endsWith('.png'))) {
+                            img.src = path.startsWith('/') ? path : '/' + path;
+                        }
+                    }
+                }
+            });
+        });
+
+        observer.observe(document.body, { childList: true, subtree: true });
     </script>
 </body>
 
