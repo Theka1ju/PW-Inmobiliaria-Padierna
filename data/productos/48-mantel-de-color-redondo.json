@@ -1,0 +1,12 @@
+{
+  "id": 48,
+  "nombre": "Mantel de Color Redondo",
+  "categoria": "Mantelería",
+  "precio": 70,
+  "fotos": [
+    "img/redondocolor.jpg",
+    "img/redondocolor2.jpg",
+    "img/redondocolor3.jpg"
+  ],
+  "desc": "Mantel circular en diversos colores."
+}

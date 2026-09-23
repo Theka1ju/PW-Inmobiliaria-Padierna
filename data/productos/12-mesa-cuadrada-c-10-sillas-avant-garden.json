@@ -1,0 +1,10 @@
+{
+  "id": 12,
+  "nombre": "Mesa Cuadrada c/10 Sillas Avant Garden",
+  "categoria": "Mesas y Sillas",
+  "precio": 1100,
+  "fotos": [
+    "img/mesa_cua_avant.jpg"
+  ],
+  "desc": "Mesa cuadrada imperial con 10 sillas Avant Garden."
+}

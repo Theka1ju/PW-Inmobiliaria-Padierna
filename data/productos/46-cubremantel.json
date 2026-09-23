@@ -1,0 +1,11 @@
+{
+  "id": 46,
+  "nombre": "Cubremantel",
+  "categoria": "Mantelería",
+  "precio": 40,
+  "fotos": [
+    "img/cubremantel.png",
+    "img/cubremantel2.png"
+  ],
+  "desc": "Cubremantel cuadrado para sobreponer (varios colores a elegir)."
+}

@@ -1,0 +1,10 @@
+{
+  "id": 54,
+  "nombre": "Cubiertos Plateados (Tenedor / Cuchara / Cuchillo / Cucharita)",
+  "categoria": "Cristalería",
+  "precio": 6,
+  "fotos": [
+    "img/cubiertos.jpeg"
+  ],
+  "desc": "Precio por pieza en acero inoxidable."
+}

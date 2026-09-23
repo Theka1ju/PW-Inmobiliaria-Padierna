@@ -1,0 +1,12 @@
+{
+  "id": 7,
+  "nombre": "Mesa Rústica / Campirana c/10 Sillas Crossback",
+  "categoria": "Mesas y Sillas",
+  "precio": 1700,
+  "fotos": [
+    "img/mesacampiranacrossback.jpeg",
+    "img/mesacampiranacrossback1.jpeg",
+    "img/mesacampiranacrossback2.jpeg"
+  ],
+  "desc": "Mesa rústica con 10 sillas Crossback. Incluye camino de mesa a elegir."
+}

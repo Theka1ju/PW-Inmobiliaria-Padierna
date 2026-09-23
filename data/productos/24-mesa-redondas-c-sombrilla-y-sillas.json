@@ -1,0 +1,16 @@
+{
+  "id": 24,
+  "nombre": "Mesa Redondas c/Sombrilla y Sillas",
+  "categoria": "Mesas y Sillas",
+  "precio": 0,
+  "fotos": [
+    "img/tifanny_blanca_sombra.jpg",
+    "img/tifanny_blanca_sombra2.jpg",
+    "img/tifanny_blanca_sombra3.jpg",
+    "img/crossback_sombra.jpg",
+    "img/crossback_sombra2.jpg",
+    "img/acojinada_sombra.jpg",
+    "img/acojinada_sombra2.jpg"
+  ],
+  "desc": "Mesa Redonda c/Sombrilla y 10 Sillas Tiffany Blanca - $800 MXN\nMesa Redonda c/Sombrilla y 10 Sillas Tiffany Dorada - $900 MXN\nMesa Redonda c/Sombrilla y 10 Sillas Tiffany Negra - $1,000 MXN\nMesa Redonda c/Sombrilla y 10 Sillas Avant Garden - $900 MXN\nMesa Redonda c/Sombrilla y 10 Sillas Crossback - $1,100 MXN\nMesa Redonda c/Sombrilla y 10 Sillas Acojinadas - $600 MXN\n"
+}

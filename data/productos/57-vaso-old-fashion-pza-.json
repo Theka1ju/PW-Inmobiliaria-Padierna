@@ -1,0 +1,10 @@
+{
+  "id": 57,
+  "nombre": "Vaso Old Fashion (pza)",
+  "categoria": "Cristalería",
+  "precio": 15,
+  "fotos": [
+    "img/Caso_oldfashon.jpeg"
+  ],
+  "desc": "Vaso bajo tipo rocas para whisky o licores."
+}

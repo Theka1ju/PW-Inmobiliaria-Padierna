@@ -1,0 +1,10 @@
+{
+  "id": 44,
+  "nombre": "Mantel Blanco Tablón",
+  "categoria": "Mantelería",
+  "precio": 50,
+  "fotos": [
+    "img/tablonblanco.jpg"
+  ],
+  "desc": "Mantel rectangular blanco para tablón de 2.40m."
+}

@@ -1,0 +1,10 @@
+{
+  "id": 26,
+  "nombre": "Base de Sombrilla",
+  "categoria": "Mesas y Sillas",
+  "precio": 100,
+  "fotos": [
+    "img/base_sombrilla.jpg"
+  ],
+  "desc": "Base firme para sombrilla individual."
+}

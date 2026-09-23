@@ -1,0 +1,10 @@
+{
+  "id": 55,
+  "nombre": "Cubiertos Dorados (Tenedor / Cuchara / Cuchillo / Cucharita)",
+  "categoria": "Cristalería",
+  "precio": 12,
+  "fotos": [
+    "img/cubiertos_dorados.jpeg"
+  ],
+  "desc": "Precio por pieza individual con fino acabado oro."
+}

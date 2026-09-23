@@ -1,0 +1,11 @@
+{
+  "id": 50,
+  "nombre": "Banda / Moño para Sillas",
+  "categoria": "Mantelería",
+  "precio": 10,
+  "fotos": [
+    "img/banda.png",
+    "img/banda2.png"
+  ],
+  "desc": "Banda de color para respaldo de silla."
+}

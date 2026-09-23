@@ -1,0 +1,10 @@
+{
+  "id": 60,
+  "nombre": "Plato y Taza para Café",
+  "categoria": "Cristalería",
+  "precio": 25,
+  "fotos": [
+    "img/Taza_con_plato.jpeg"
+  ],
+  "desc": "Juego de taza de cerámica con plato cafetero."
+}

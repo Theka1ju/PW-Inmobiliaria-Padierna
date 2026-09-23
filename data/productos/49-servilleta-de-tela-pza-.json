@@ -1,0 +1,10 @@
+{
+  "id": 49,
+  "nombre": "Servilleta de Tela (pza)",
+  "categoria": "Mantelería",
+  "precio": 8,
+  "fotos": [
+    "img/servilletas.png"
+  ],
+  "desc": "Servilleta de tela lavada y planchada."
+}

@@ -1,0 +1,19 @@
+{
+  "id": 20,
+  "nombre": "Mesa Redonda c/10 Sillas Tiffany",
+  "categoria": "Mesas y Sillas",
+  "precio": 0,
+  "fotos": [
+    "img/redonda_tiffany_blanca.jpg",
+    "img/redonda_tiffany_blanca2.jpg",
+    "img/tiffanyDorada.jpeg",
+    "img/redondatiffany.jpeg",
+    "img/redondatiffany1.jpg",
+    "img/redondatiffany2.jpg",
+    "img/redondatiffany3.jpg",
+    "img/redondatiffany4.jpg",
+    "img/redondatiffany5.jpg",
+    "img/redondatiffany6.jpg"
+  ],
+  "desc": "Mesa Redonda c/10 Sillas Tiffany Blanca - 10 personas - $600 MXN\nMesa Redonda c/10 Sillas Tiffany Dorada - 10 personas - $700 MXN\nMesa Redonda c/10 Sillas Tiffany Negra - 10 personas - $850 MXN"
+}

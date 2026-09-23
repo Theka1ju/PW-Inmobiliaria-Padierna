@@ -1,0 +1,10 @@
+{
+  "id": 8,
+  "nombre": "Mesas Vintage (Rectangulares y Cuadradas)",
+  "categoria": "Mesas y Sillas",
+  "precio": 0,
+  "fotos": [
+    "img/vintage_tiff_blanca.jpeg"
+  ],
+  "desc": "Mesa Vintage Rectangular 12p (Tiffany Blanca) - 1.22 x 2.44 m - $1,400 MXN\nMesa Vintage Rectangular 12p (Tiffany Dorada) - 1.22 x 2.44 m - $1,500 MXN\nMesa Vintage Rectangular 12p (Tiffany Negra) - 1.22 x 2.44 m - $1,600 MXN\nMesa Vintage Cuadrada 12p (Tiffany Blanca) - 1.70 x 1.70 m - $1,400 MXN\nMesa Vintage Cuadrada 12p (Tiffany Dorada) - 1.70 x 1.70 m - $1,500 MXN\nMesa Vintage Cuadrada 12p (Tiffany Negra) - 1.70 x 1.70 m - $1,600 MXN\nMesa Vintage Rectangular 10p (Tiffany Blanca) - 0.75 x 2.44 m - $1,200 MXN\nMesa Vintage Rectangular 10p (Tiffany Dorada) - 0.75 x 2.44 m - $1,300 MXN\nMesa Vintage Rectangular 10p (Tiffany Negra) - 0.75 x 2.44 m - $1,400 MXN"
+}

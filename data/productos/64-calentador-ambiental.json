@@ -1,0 +1,14 @@
+{
+  "id": 64,
+  "nombre": "Calentador Ambiental",
+  "categoria": "Otros",
+  "precio": 1300,
+  "fotos": [
+    "img/calentador.jpg",
+    "img/calentador2.jpg",
+    "img/calentador3.jpg",
+    "img/calentador4.jpg",
+    "img/calentador5.jpg"
+  ],
+  "desc": "Calentador tipo hongo a gas para jardín o terraza."
+}

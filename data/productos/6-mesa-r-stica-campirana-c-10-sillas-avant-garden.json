@@ -1,0 +1,15 @@
+{
+  "id": 6,
+  "nombre": "Mesa Rústica / Campirana c/10 Sillas Avant Garden",
+  "categoria": "Mesas y Sillas",
+  "precio": 1500,
+  "fotos": [
+    "img/mesacampiranagarden.jpeg",
+    "img/rustica_avant.jpg",
+    "img/rustica_avant2.jpg",
+    "img/rustica_avant3.jpg",
+    "img/rustica_avant4.jpg",
+    "img/rustica_avant5.jpg"
+  ],
+  "desc": "Mesa rústica con 10 sillas Avant Garden. Incluye camino de mesa a elegir."
+}

@@ -1,0 +1,10 @@
+{
+  "id": 27,
+  "nombre": "Mesas Bar (Redondas y Sola)",
+  "categoria": "Mesas y Sillas",
+  "precio": 0,
+  "fotos": [
+    "img/bar_aco.jpeg"
+  ],
+  "desc": "Mesa Bar Sola - 80 cm diámetro - $100 MXN\nMesa Bar Redonda c/4 Sillas Acojinadas - 4 personas - $200 MXN\nMesa Bar Redonda c/4 Sillas Tiffany Blanca - 4 personas - $400 MXN\nMesa Bar Redonda c/4 Sillas Tiffany Dorada - 4 personas - $500 MXN\nMesa Bar Redonda c/4 Sillas Tiffany Negra - 4 personas - $600 MXN"
+}

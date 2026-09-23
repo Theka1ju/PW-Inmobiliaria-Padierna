@@ -1,0 +1,10 @@
+{
+  "id": 47,
+  "nombre": "Mantel de Color Tablón",
+  "categoria": "Mantelería",
+  "precio": 60,
+  "fotos": [
+    "img/mantel_color.jpeg"
+  ],
+  "desc": "Mantel rectangular en diversos colores."
+}

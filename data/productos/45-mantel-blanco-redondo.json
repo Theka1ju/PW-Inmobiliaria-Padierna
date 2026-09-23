@@ -1,0 +1,10 @@
+{
+  "id": 45,
+  "nombre": "Mantel Blanco Redondo",
+  "categoria": "Mantelería",
+  "precio": 60,
+  "fotos": [
+    "img/redondoblanco.jpg"
+  ],
+  "desc": "Mantel blanco circular para mesa redonda."
+}

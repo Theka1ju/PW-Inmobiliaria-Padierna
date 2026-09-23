@@ -1,0 +1,10 @@
+{
+  "id": 43,
+  "nombre": "Lona Blanca 10 x 15 m",
+  "categoria": "Lonas",
+  "precio": 3500,
+  "fotos": [
+    "img/lona (25).jpg"
+  ],
+  "desc": "Lona blanca máxima capacidad de 10x15m (150 m²)."
+}

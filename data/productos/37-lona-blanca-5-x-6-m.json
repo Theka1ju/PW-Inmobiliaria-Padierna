@@ -1,0 +1,10 @@
+{
+  "id": 37,
+  "nombre": "Lona Blanca 5 x 6 m",
+  "categoria": "Lonas",
+  "precio": 1000,
+  "fotos": [
+    "img/lona5.jpg"
+  ],
+  "desc": "Lona blanca uso rudo impermeable de 5x6m. Incluye estructura y montaje."
+}

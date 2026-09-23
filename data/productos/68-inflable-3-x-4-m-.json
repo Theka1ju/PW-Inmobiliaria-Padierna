@@ -1,0 +1,12 @@
+{
+  "id": 68,
+  "nombre": "Inflable (3 x 4 m)",
+  "categoria": "Otros",
+  "precio": 600,
+  "fotos": [
+    "img/inflable.jpg",
+    "img/inflable2.jpg",
+    "img/inflable3.jpg"
+  ],
+  "desc": "Juego inflable infantil de 3x4m incluye motor y montaje."
+}

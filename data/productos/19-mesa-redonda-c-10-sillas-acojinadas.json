@@ -1,0 +1,10 @@
+{
+  "id": 19,
+  "nombre": "Mesa Redonda c/10 Sillas Acojinadas",
+  "categoria": "Mesas y Sillas",
+  "precio": 350,
+  "fotos": [
+    "img/redonda_acojinada.jpeg"
+  ],
+  "desc": "Mesa redonda para 10 personas con 10 sillas acojinadas."
+}

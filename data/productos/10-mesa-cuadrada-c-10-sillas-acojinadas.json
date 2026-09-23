@@ -1,0 +1,10 @@
+{
+  "id": 10,
+  "nombre": "Mesa Cuadrada c/10 Sillas Acojinadas",
+  "categoria": "Mesas y Sillas",
+  "precio": 600,
+  "fotos": [
+    "img/mesa_cua_aco.jpg"
+  ],
+  "desc": "Mesa cuadrada imperial con 10 sillas acojinadas."
+}

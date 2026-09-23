@@ -1,0 +1,11 @@
+{
+  "id": 63,
+  "nombre": "Templete (Altura 50 cm - por m²)",
+  "categoria": "Templetes",
+  "precio": 300,
+  "fotos": [
+    "img/templete.jpeg",
+    "img/templete2.jpeg"
+  ],
+  "desc": "Estructura de templete o escenario a 50 cm de altura (precio por m²)."
+}

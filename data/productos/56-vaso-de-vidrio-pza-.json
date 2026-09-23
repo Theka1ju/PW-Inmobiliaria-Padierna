@@ -1,0 +1,12 @@
+{
+  "id": 56,
+  "nombre": "Vaso de Vidrio (pza)",
+  "categoria": "Cristalería",
+  "precio": 8,
+  "fotos": [
+    "img/vaso.jpeg",
+    "img/Caso_oldfashon.jpeg",
+    "img/Copa_Globo.jpeg"
+  ],
+  "desc": "Vaso de vidrio cristalino estándar."
+}

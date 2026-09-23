@@ -1,0 +1,10 @@
+{
+  "id": 29,
+  "nombre": "Silla Infantil Sola",
+  "categoria": "Mesas y Sillas",
+  "precio": 10,
+  "fotos": [
+    "img/infantil_sola.jpg"
+  ],
+  "desc": "Sillita individual para niños (acojinada o plástica)."
+}

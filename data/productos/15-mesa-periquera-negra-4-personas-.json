@@ -1,0 +1,11 @@
+{
+  "id": 15,
+  "nombre": "Mesa Periquera Negra (4 personas)",
+  "categoria": "Mesas y Sillas",
+  "precio": 700,
+  "fotos": [
+    "img/Periquera_negra2.jpeg",
+    "img/Periquera_negra3.jpg"
+  ],
+  "desc": "Mesa periquera alta negra con 4 bancos."
+}

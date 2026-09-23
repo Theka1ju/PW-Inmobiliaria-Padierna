@@ -1,0 +1,13 @@
+{
+  "id": 17,
+  "nombre": "Mesa Periquera Negra (6 personas)",
+  "categoria": "Mesas y Sillas",
+  "precio": 1000,
+  "fotos": [
+    "img/periquera_negra.jpg",
+    "img/periquera_negra2.jpg",
+    "img/mesa_periquera_negra3.jpeg",
+    "img/perinegra6.jpg"
+  ],
+  "desc": "Juego de mesa alta acabado negro con 6 bancos."
+}

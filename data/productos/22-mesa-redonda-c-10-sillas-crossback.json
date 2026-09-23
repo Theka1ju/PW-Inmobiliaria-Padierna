@@ -1,0 +1,11 @@
+{
+  "id": 22,
+  "nombre": "Mesa Redonda c/10 Sillas Crossback",
+  "categoria": "Mesas y Sillas",
+  "precio": 1000,
+  "fotos": [
+    "img/redondacrossback.jpeg",
+    "img/redondacrossback2.jpeg"
+  ],
+  "desc": "Mesa redonda con 10 sillas de madera Crossback."
+}

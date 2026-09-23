@@ -1,0 +1,10 @@
+{
+  "id": 30,
+  "nombre": "Silla Acojinada",
+  "categoria": "Mesas y Sillas",
+  "precio": 25,
+  "fotos": [
+    "img/Silla_Acojinada.jpeg"
+  ],
+  "desc": "Precio por pieza. Silla plegable con asiento y respaldo acojinado."
+}

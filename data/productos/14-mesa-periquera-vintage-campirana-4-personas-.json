@@ -1,0 +1,12 @@
+{
+  "id": 14,
+  "nombre": "Mesa Periquera Vintage / Campirana (4 personas)",
+  "categoria": "Mesas y Sillas",
+  "precio": 600,
+  "fotos": [
+    "img/vintageperi4.jpg",
+    "img/vintageperi42.jpg",
+    "img/vintageperi43.jpg"
+  ],
+  "desc": "Mesa periquera rústica con 4 bancos incluidos."
+}

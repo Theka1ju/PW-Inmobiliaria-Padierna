@@ -1,0 +1,11 @@
+{
+  "id": 32,
+  "nombre": "Silla Tiffany Dorada",
+  "categoria": "Mesas y Sillas",
+  "precio": 60,
+  "fotos": [
+    "img/Silla_tiffany_dorada.jpeg",
+    "img/tiffanyDorada.jpeg"
+  ],
+  "desc": "Precio por pieza. Silla Tiffany dorada incluye cojín."
+}

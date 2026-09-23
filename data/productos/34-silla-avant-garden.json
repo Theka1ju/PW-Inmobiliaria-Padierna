@@ -1,0 +1,10 @@
+{
+  "id": 34,
+  "nombre": "Silla Avant Garden",
+  "categoria": "Mesas y Sillas",
+  "precio": 60,
+  "fotos": [
+    "img/silla_avant.jpg"
+  ],
+  "desc": "Precio por pieza. Silla plegable de madera blanca con cojín."
+}

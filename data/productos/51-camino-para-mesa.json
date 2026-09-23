@@ -1,0 +1,19 @@
+{
+  "id": 51,
+  "nombre": "Camino para Mesa",
+  "categoria": "Mantelería",
+  "precio": 50,
+  "fotos": [
+    "img/camino.png",
+    "img/camino2.png",
+    "img/camino3.png",
+    "img/camino4.png",
+    "img/camino5.png",
+    "img/camino6.png",
+    "img/camino7.png",
+    "img/camino8.png",
+    "img/camino9.png",
+    "img/camino10.png"
+  ],
+  "desc": "Tira central decorativa de tela para mesas."
+}

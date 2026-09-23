@@ -1,0 +1,12 @@
+{
+  "id": 11,
+  "nombre": "Mesa Cuadrada c/10 Sillas Tiffany",
+  "categoria": "Mesas y Sillas",
+  "precio": 0,
+  "fotos": [
+    "img/mesa_cua_tif_blanca.jpg",
+    "img/mesa_cua_tif_dorada.jpg",
+    "img/Tifanynegra.jpg"
+  ],
+  "desc": "Mesa Cuadrada c/10 Sillas Tiffany Blanca - 10 personas - $900 MXN\nMesa Cuadrada c/10 Sillas Tiffany Dorada - 10 personas - $1,000 MXN\nMesa Cuadrada c/10 Sillas Tiffany Negra - 10 personas - $1,100 MXN"
+}

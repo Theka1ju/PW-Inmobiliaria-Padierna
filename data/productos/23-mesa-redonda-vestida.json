@@ -1,0 +1,12 @@
+{
+  "id": 23,
+  "nombre": "Mesa Redonda Vestida",
+  "categoria": "Mesas y Sillas",
+  "precio": 450,
+  "fotos": [
+    "img/redonda_vestida.jpg",
+    "img/redonda_vestida2.jpg",
+    "img/redonda_vestida3.jpg"
+  ],
+  "desc": "Incluye mantel blanco, banda de color, cubremantel, funda blanca para sillas y 10 sillas acojinadas."
+}

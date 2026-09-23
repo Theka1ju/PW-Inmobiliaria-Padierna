@@ -1,0 +1,13 @@
+{
+  "id": 59,
+  "nombre": "Copa de Color (Azul / Verde / Humo / Amarillo / Rosa)",
+  "categoria": "Cristalería",
+  "precio": 30,
+  "fotos": [
+    "img/copa_color_Rosa_Purpura.jpeg",
+    "img/copa_color_Rosa_Purpura2.jpeg",
+    "img/copa_color_Humo.jpeg",
+    "img/copa_color.jpeg"
+  ],
+  "desc": "Copa labrada en cristal de color a elegir (azul, verde, humo, amarillo o rosa)."
+}

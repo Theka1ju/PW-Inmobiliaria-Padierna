@@ -1,0 +1,14 @@
+{
+  "id": 3,
+  "nombre": "Mesa california con silla crossback",
+  "categoria": "Mesas y Sillas",
+  "precio": 2200,
+  "fotos": [
+    "img/californiacross.jpeg",
+    "img/californiacross1.jpeg",
+    "img/californiacross2.jpeg",
+    "img/californiacross3.jpeg",
+    "img/californiacross4.jpeg"
+  ],
+  "desc": "Mesa california para 10 personas con sillas crossback."
+}

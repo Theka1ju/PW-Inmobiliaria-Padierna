@@ -1,0 +1,10 @@
+{
+  "id": 33,
+  "nombre": "Silla Tiffany Negra",
+  "categoria": "Mesas y Sillas",
+  "precio": 80,
+  "fotos": [
+    "img/sillatiffanynegra.jpeg"
+  ],
+  "desc": "Precio por pieza. Silla Tiffany negra de gala incluye cojín."
+}

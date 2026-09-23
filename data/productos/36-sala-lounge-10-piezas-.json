@@ -1,0 +1,14 @@
+{
+  "id": 36,
+  "nombre": "Sala Lounge (10 piezas)",
+  "categoria": "Sala Lounge",
+  "precio": 1500,
+  "fotos": [
+    "img/lounge (4).jpg",
+    "img/lounge (5).jpg",
+    "img/lounge (1).jpg",
+    "img/lounge (2).jpg",
+    "img/lounge (3).jpg"
+  ],
+  "desc": "Juego completo tipo lounge para 10 personas con sillones modulares, taburetes y mesa de centro iluminada."
+}

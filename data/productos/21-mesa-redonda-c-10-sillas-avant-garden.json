@@ -1,0 +1,17 @@
+{
+  "id": 21,
+  "nombre": "Mesa Redonda c/10 Sillas Avant Garden",
+  "categoria": "Mesas y Sillas",
+  "precio": 900,
+  "fotos": [
+    "img/avant_garden.jpeg",
+    "img/avant_garden2.jpeg",
+    "img/avant_garden3.jpeg",
+    "img/avant_garden4.jpg",
+    "img/avant_garden5.jpg",
+    "img/avant_garden6.jpg",
+    "img/avant_garden7.jpg",
+    "img/avant_garden8.jpg"
+  ],
+  "desc": "Mesa redonda para 10 personas con 10 sillas Avant Garden."
+}

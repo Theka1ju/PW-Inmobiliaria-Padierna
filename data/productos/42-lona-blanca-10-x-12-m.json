@@ -1,0 +1,10 @@
+{
+  "id": 42,
+  "nombre": "Lona Blanca 10 x 12 m",
+  "categoria": "Lonas",
+  "precio": 3200,
+  "fotos": [
+    "img/lona (21).jpg"
+  ],
+  "desc": "Lona blanca de gran formato 10x12m."
+}

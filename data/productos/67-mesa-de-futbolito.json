@@ -1,0 +1,10 @@
+{
+  "id": 67,
+  "nombre": "Mesa de Futbolito",
+  "categoria": "Otros",
+  "precio": 1000,
+  "fotos": [
+    "img/futbolito.jpg"
+  ],
+  "desc": "Mesa de futbolito profesional para entretenimiento de invitados."
+}

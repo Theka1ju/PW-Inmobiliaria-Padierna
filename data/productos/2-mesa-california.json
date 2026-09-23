@@ -1,0 +1,10 @@
+{
+  "id": 2,
+  "nombre": "Mesa california",
+  "categoria": "Mesas y Sillas",
+  "precio": 1000,
+  "fotos": [
+    "img/california.jpeg"
+  ],
+  "desc": "Mesa california para 10 personas."
+}

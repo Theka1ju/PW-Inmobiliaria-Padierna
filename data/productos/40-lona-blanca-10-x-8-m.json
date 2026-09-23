@@ -1,0 +1,10 @@
+{
+  "id": 40,
+  "nombre": "Lona Blanca 10 x 8 m",
+  "categoria": "Lonas",
+  "precio": 2000,
+  "fotos": [
+    "img/lona (15).jpg"
+  ],
+  "desc": "Lona blanca impermeable de 10x8m. Excelente cobertura."
+}

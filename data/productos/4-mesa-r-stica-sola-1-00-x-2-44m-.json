@@ -1,0 +1,12 @@
+{
+  "id": 4,
+  "nombre": "Mesa Rústica Sola (1.00 x 2.44m)",
+  "categoria": "Mesas y Sillas",
+  "precio": 800,
+  "fotos": [
+    "img/rustica_sola.jpg",
+    "img/rustica_sola2.jpg",
+    "img/rustica_sola3.jpg"
+  ],
+  "desc": "Mesa rústica de madera sólida de 1.00 x 2.44m individual."
+}

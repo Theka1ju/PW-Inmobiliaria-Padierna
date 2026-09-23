@@ -1,0 +1,11 @@
+{
+  "id": 61,
+  "nombre": "Chafer / Bufetera (pza)",
+  "categoria": "Cristalería",
+  "precio": 300,
+  "fotos": [
+    "img/asadorG.jpg",
+    "img/asadorG2.jpg"
+  ],
+  "desc": "Mantenedor térmico de alimentos a baño maría con quemadores."
+}

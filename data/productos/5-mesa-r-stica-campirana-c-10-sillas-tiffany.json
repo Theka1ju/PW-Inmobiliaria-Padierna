@@ -1,0 +1,12 @@
+{
+  "id": 5,
+  "nombre": "Mesa Rústica / Campirana c/10 Sillas Tiffany",
+  "categoria": "Mesas y Sillas",
+  "precio": 0,
+  "fotos": [
+    "img/rustica_tifany_blanca.jpg",
+    "img/rustica_tifany_blanca2.jpg",
+    "img/rustica_tifany_negra.jpg"
+  ],
+  "desc": "Mesa Rústica c/10 Sillas Tiffany Blanca - Incluye camino de color - $1,400 MXN\nMesa Rústica c/10 Sillas Tiffany Dorada - Incluye camino de color - $1,500 MXN\nMesa Rústica c/10 Sillas Tiffany Negra - Incluye camino de color - $1,600 MXN"
+}

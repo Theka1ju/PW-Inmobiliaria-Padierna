@@ -1,0 +1,10 @@
+{
+  "id": 25,
+  "nombre": "Sombrilla con Base",
+  "categoria": "Mesas y Sillas",
+  "precio": 250,
+  "fotos": [
+    "img/sombrilla.jpg"
+  ],
+  "desc": "Sombrilla individual para exterior incluye su base firme."
+}

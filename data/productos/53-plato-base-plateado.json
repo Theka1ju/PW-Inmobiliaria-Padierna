@@ -1,0 +1,10 @@
+{
+  "id": 53,
+  "nombre": "Plato Base Plateado",
+  "categoria": "Cristalería",
+  "precio": 12,
+  "fotos": [
+    "img/vaso.jpeg"
+  ],
+  "desc": "Plato base decorativo plateado para montaje de mesas."
+}

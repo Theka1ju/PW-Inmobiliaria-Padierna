@@ -1,0 +1,10 @@
+{
+  "id": 58,
+  "nombre": "Copas para Vino (pza)",
+  "categoria": "Cristalería",
+  "precio": 18,
+  "fotos": [
+    "img/Copa_Globo.jpeg"
+  ],
+  "desc": "Copa de cristal tradicional para agua o vino."
+}

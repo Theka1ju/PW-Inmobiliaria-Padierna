@@ -1,0 +1,11 @@
+{
+  "id": 65,
+  "nombre": "Sombrilla Individual",
+  "categoria": "Otros",
+  "precio": 180,
+  "fotos": [
+    "img/sombrilla.jpg",
+    "img/sombrilla 2.jpg"
+  ],
+  "desc": "Sombrilla para intemperie individual."
+}

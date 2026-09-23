@@ -1,0 +1,12 @@
+{
+  "id": 62,
+  "nombre": "Tarima de Madera (por m²)",
+  "categoria": "Templetes",
+  "precio": 120,
+  "fotos": [
+    "img/tarima.jpeg",
+    "img/templete3.jpg",
+    "img/templete4.jpg"
+  ],
+  "desc": "Tarima de madera nivelada para piso firme (precio por m²)."
+}
