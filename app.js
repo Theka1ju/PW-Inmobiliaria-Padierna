@@ -15,27 +15,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 async function cargarProductos() {
     try {
+        // Enfoque recomendado: leer la lista completa generada o el listado de archivos
         const respuesta = await fetch("data/productos.json");
-        if (!respuesta.ok) {
-            throw new Error(`Error HTTP: ${respuesta.status}`);
-        }
+        if (!respuesta.ok) throw new Error(`HTTP ${respuesta.status}`);
         const data = await respuesta.json();
         productos = data.items || [];
         renderCatalog();
     } catch (error) {
         console.error("Error al cargar los productos:", error);
-        const grid = document.getElementById("catalog-grid");
-        if (grid) {
-            grid.innerHTML = `
-                <div class="col-span-full text-center py-12 text-stone-500">
-                    <p class="font-bold">No se pudieron cargar los productos en este momento.</p>
-                    <p class="text-xs mt-1">Intenta recargar la página más tarde.</p>
-                </div>
-            `;
-        }
     }
 }
-
 function filtrarCategoria(categoria) {
     categoriaActual = categoria;
     document.querySelectorAll(".cat-btn").forEach(btn => {
