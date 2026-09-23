@@ -4,12 +4,28 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Administrador de Catálogo | Alquiladora Padierna GM</title>
+    <title>Administrador | Alquiladora GM Padierna</title>
+
+    <!-- Script de Netlify Identity -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <!-- Personalización visual del panel -->
+    <style>
+        /* Estilos del encabezado del panel */
+        [class*="AppHeaderContent"] {
+            background-color: #1E3D9A !important;
+        }
+
+        /* Botón de publicar/guardar destacado */
+        button[class*="SaveButton"] {
+            background-color: #10B981 !important;
+            font-weight: bold !important;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Decap CMS Core -->
+    <!-- Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 </body>
 

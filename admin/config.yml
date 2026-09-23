@@ -1,34 +1,45 @@
 backend:
   name: git-gateway
-  branch: main # o 'master', según el nombre de tu rama en GitHub
+  branch: main
 
-media_folder: "img" # Carpeta donde se guardarán las fotos subidas
-public_folder: "img" # Ruta pública con la que se cargarán en la web
+media_folder: "img"
+public_folder: "img"
 
 collections:
   - name: "catalogo"
     label: "Catálogo de Productos"
     files:
-      - name: "productos"
-        label: "Lista de Productos"
-        file: "data/productos.json"
+      - file: "data/productos.json"
+        label: "Gestión de Productos"
+        name: "productos"
         fields:
           - name: "items"
-            label: "Productos"
+            label: "Artículos del Catálogo"
             label_singular: "Producto"
             widget: "list"
+            # Hace que cada elemento muestre su imagen, nombre y precio en el listado colapsado:
+            summary: '{{fields.nombre}} — ${{fields.precio}} MXN [{{fields.categoria}}]'
+            collapsed: true
+            minimize_collapsed: true
             fields:
-              - { label: "ID Numérico", name: "id", widget: "number", value_type: "int" }
-              - { label: "Nombre", name: "nombre", widget: "string" }
-              - { 
-                  label: "Categoría", 
-                  name: "categoria", 
-                  widget: "select", 
-                  options: ["Carpas", "Mesas y Sillas", "Sala Lounge", "Lonas", "Mantelería", "Cristalería", "Templetes", "Otros"] 
-                }
-              - { label: "Precio ($ MXN - dejar en 0 si es cotización o paquete múltiple)", name: "precio", widget: "number", value_type: "int", default: 0 }
-              - label: "Galería de Fotos"
+              - { label: "ID Numérico", name: "id", widget: "number", value_type: "int", hint: "Número identificador único (ej. 69)" }
+              - { label: "Nombre del Producto", name: "nombre", widget: "string", hint: "Nombre visible en el catálogo" }
+              - label: "Categoría"
+                name: "categoria"
+                widget: "select"
+                options:
+                  - "Carpas"
+                  - "Mesas y Sillas"
+                  - "Sala Lounge"
+                  - "Lonas"
+                  - "Mantelería"
+                  - "Cristalería"
+                  - "Templetes"
+                  - "Otros"
+              - { label: "Precio base (MXN)", name: "precio", widget: "number", value_type: "int", default: 0, hint: "Coloca 0 si es Precio a Cotizar" }
+              - label: "Fotos del Producto"
                 name: "fotos"
                 widget: "list"
-                field: { label: "Foto", name: "foto", widget: "image" }
-              - { label: "Descripción o Lista de Variantes", name: "desc", widget: "text", required: false }
+                label_singular: "Foto"
+                field: { label: "Imagen", name: "foto", widget: "image" }
+              - { label: "Descripción o Variantes de Precio", name: "desc", widget: "text", hint: "Puedes escribir detalles o la lista de precios por medida" }
