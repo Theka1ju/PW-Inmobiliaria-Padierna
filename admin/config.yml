@@ -8,65 +8,32 @@ media_folder: "img"
 public_folder: "img"
 
 collections:
-  - name: "catalogo"
-    label: "Catálogo de Productos"
-    files:
-      - file: "data/productos.json"
-        label: "Lista de Productos"
-        name: "productos"
-        fields:
-          - name: "items"
-            label: "Todos los Productos"
-            label_singular: "Producto"
-            widget: "list"
-            # Muestra la foto, el nombre y el precio en la fila cerrada:
-            summary: '{{fields.nombre}} — ${{fields.precio}} MXN [{{fields.categoria}}]'
-            collapsed: true
-            minimize_collapsed: true
-            fields:
-              - label: "Número ID"
-                name: "id"
-                widget: "number"
-                value_type: "int"
-                hint: "Número único de este producto (no repetirlo)."
-
-              - label: "Nombre del Producto"
-                name: "nombre"
-                widget: "string"
-                hint: "Nombre tal como se verá en la página web."
-
-              - label: "Categoría"
-                name: "categoria"
-                widget: "select"
-                hint: "Selecciona el grupo donde debe mostrarse."
-                options:
-                  - "Carpas"
-                  - "Mesas y Sillas"
-                  - "Sala Lounge"
-                  - "Lonas"
-                  - "Mantelería"
-                  - "Cristalería"
-                  - "Templetes"
-                  - "Otros"
-
-              - label: "Precio General (MXN)"
-                name: "precio"
-                widget: "number"
-                value_type: "int"
-                default: 0
-                hint: "Escribe sólo números. Pon 0 si el precio es 'A Cotizar'."
-
-              - label: "Fotografías del Producto"
-                name: "fotos"
-                widget: "list"
-                label_singular: "Foto"
-                hint: "Presiona para subir fotos desde tu computadora o celular."
-                field: 
-                  label: "Subir Imagen"
-                  name: "foto"
-                  widget: "image"
-
-              - label: "Detalles o Lista de Precios por Medida"
-                name: "desc"
-                widget: "text"
-                hint: "Escribe aquí la descripción o las medidas y costos especiales."
+  - name: "productos"
+    label: "Productos"
+    label_singular: "Producto"
+    folder: "data/productos"
+    create: true
+    format: "json"
+    slug: "{{id}}-{{nombre}}"
+    summary: "{{nombre}} — ${{precio}} MXN"
+    fields:
+      - { label: "Número ID", name: "id", widget: "number", value_type: "int" }
+      - { label: "Nombre del Producto", name: "nombre", widget: "string" }
+      - label: "Categoría"
+        name: "categoria"
+        widget: "select"
+        options:
+          - "Carpas"
+          - "Mesas y Sillas"
+          - "Sala Lounge"
+          - "Lonas"
+          - "Mantelería"
+          - "Cristalería"
+          - "Templetes"
+          - "Otros"
+      - { label: "Precio General (MXN)", name: "precio", widget: "number", value_type: "int", default: 0 }
+      - label: "Fotos"
+        name: "fotos"
+        widget: "list"
+        field: { label: "Imagen", name: "foto", widget: "image" }
+      - { label: "Descripción o Medidas", name: "desc", widget: "text" }
