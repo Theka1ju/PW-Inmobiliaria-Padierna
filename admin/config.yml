@@ -4,8 +4,10 @@ backend:
 
 locale: "es"
 
+# Carpeta en la raíz de tu repositorio
 media_folder: "img"
-public_folder: "/"
+# Ruta pública absoluta desde la raíz web
+public_folder: "/img"
 
 collections:
   - name: "catalogo"
