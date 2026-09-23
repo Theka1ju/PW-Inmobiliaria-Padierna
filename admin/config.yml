@@ -8,32 +8,36 @@ media_folder: "img"
 public_folder: "img"
 
 collections:
-  - name: "productos"
-    label: "Productos"
-    label_singular: "Producto"
-    folder: "data/productos"
-    create: true
-    format: "json"
-    slug: "{{id}}-{{nombre}}"
-    summary: "{{nombre}} — ${{precio}} MXN"
-    fields:
-      - { label: "Número ID", name: "id", widget: "number", value_type: "int" }
-      - { label: "Nombre del Producto", name: "nombre", widget: "string" }
-      - label: "Categoría"
-        name: "categoria"
-        widget: "select"
-        options:
-          - "Carpas"
-          - "Mesas y Sillas"
-          - "Sala Lounge"
-          - "Lonas"
-          - "Mantelería"
-          - "Cristalería"
-          - "Templetes"
-          - "Otros"
-      - { label: "Precio General (MXN)", name: "precio", widget: "number", value_type: "int", default: 0 }
-      - label: "Fotos"
-        name: "fotos"
-        widget: "list"
-        field: { label: "Imagen", name: "foto", widget: "image" }
-      - { label: "Descripción o Medidas", name: "desc", widget: "text" }
+  - name: "catalogo"
+    label: "Catálogo de Productos"
+    files:
+      - file: "data/productos.json"
+        label: "Lista de Productos"
+        name: "productos"
+        fields:
+          - name: "items"
+            label: "Todos los Productos"
+            label_singular: "Producto"
+            widget: "list"
+            summary: "{{fields.nombre}} — ${{fields.precio}} MXN [{{fields.categoria}}]"
+            fields:
+              - { label: "Número ID", name: "id", widget: "number", value_type: "int" }
+              - { label: "Nombre del Producto", name: "nombre", widget: "string" }
+              - label: "Categoría"
+                name: "categoria"
+                widget: "select"
+                options:
+                  - "Carpas"
+                  - "Mesas y Sillas"
+                  - "Sala Lounge"
+                  - "Lonas"
+                  - "Mantelería"
+                  - "Cristalería"
+                  - "Templetes"
+                  - "Otros"
+              - { label: "Precio General (MXN)", name: "precio", widget: "number", value_type: "int", default: 0 }
+              - label: "Fotos"
+                name: "fotos"
+                widget: "list"
+                field: { label: "Imagen", name: "foto", widget: "image" }
+              - { label: "Descripción o Medidas", name: "desc", widget: "text" }
