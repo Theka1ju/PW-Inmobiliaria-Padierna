@@ -13,6 +13,10 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Netlify Identity Widget (Necesario para procesar confirmaciones de invitación) -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
     <style>
         .scrollbar-none::-webkit-scrollbar {
             display: none;
@@ -225,7 +229,21 @@
         </div>
     </footer>
 
+    <!-- Lógica del catálogo -->
     <script src="app.js"></script>
+
+    <!-- Redirección automática al panel tras aceptar invitaciones o iniciar sesión -->
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>

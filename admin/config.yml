@@ -1,0 +1,34 @@
+backend:
+  name: git-gateway
+  branch: main # o 'master', según el nombre de tu rama en GitHub
+
+media_folder: "img" # Carpeta donde se guardarán las fotos subidas
+public_folder: "img" # Ruta pública con la que se cargarán en la web
+
+collections:
+  - name: "catalogo"
+    label: "Catálogo de Productos"
+    files:
+      - name: "productos"
+        label: "Lista de Productos"
+        file: "data/productos.json"
+        fields:
+          - name: "items"
+            label: "Productos"
+            label_singular: "Producto"
+            widget: "list"
+            fields:
+              - { label: "ID Numérico", name: "id", widget: "number", value_type: "int" }
+              - { label: "Nombre", name: "nombre", widget: "string" }
+              - { 
+                  label: "Categoría", 
+                  name: "categoria", 
+                  widget: "select", 
+                  options: ["Carpas", "Mesas y Sillas", "Sala Lounge", "Lonas", "Mantelería", "Cristalería", "Templetes", "Otros"] 
+                }
+              - { label: "Precio ($ MXN - dejar en 0 si es cotización o paquete múltiple)", name: "precio", widget: "number", value_type: "int", default: 0 }
+              - label: "Galería de Fotos"
+                name: "fotos"
+                widget: "list"
+                field: { label: "Foto", name: "foto", widget: "image" }
+              - { label: "Descripción o Lista de Variantes", name: "desc", widget: "text", required: false }
