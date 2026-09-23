@@ -2,6 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
+locale: "es"
+
 media_folder: "img"
 public_folder: "img"
 
@@ -10,23 +12,33 @@ collections:
     label: "Catálogo de Productos"
     files:
       - file: "data/productos.json"
-        label: "Gestión de Productos"
+        label: "Lista de Productos"
         name: "productos"
         fields:
           - name: "items"
-            label: "Artículos del Catálogo"
+            label: "Todos los Productos"
             label_singular: "Producto"
             widget: "list"
-            # Hace que cada elemento muestre su imagen, nombre y precio en el listado colapsado:
+            # Muestra la foto, el nombre y el precio en la fila cerrada:
             summary: '{{fields.nombre}} — ${{fields.precio}} MXN [{{fields.categoria}}]'
             collapsed: true
             minimize_collapsed: true
             fields:
-              - { label: "ID Numérico", name: "id", widget: "number", value_type: "int", hint: "Número identificador único (ej. 69)" }
-              - { label: "Nombre del Producto", name: "nombre", widget: "string", hint: "Nombre visible en el catálogo" }
+              - label: "Número ID"
+                name: "id"
+                widget: "number"
+                value_type: "int"
+                hint: "Número único de este producto (no repetirlo)."
+
+              - label: "Nombre del Producto"
+                name: "nombre"
+                widget: "string"
+                hint: "Nombre tal como se verá en la página web."
+
               - label: "Categoría"
                 name: "categoria"
                 widget: "select"
+                hint: "Selecciona el grupo donde debe mostrarse."
                 options:
                   - "Carpas"
                   - "Mesas y Sillas"
@@ -36,10 +48,25 @@ collections:
                   - "Cristalería"
                   - "Templetes"
                   - "Otros"
-              - { label: "Precio base (MXN)", name: "precio", widget: "number", value_type: "int", default: 0, hint: "Coloca 0 si es Precio a Cotizar" }
-              - label: "Fotos del Producto"
+
+              - label: "Precio General (MXN)"
+                name: "precio"
+                widget: "number"
+                value_type: "int"
+                default: 0
+                hint: "Escribe sólo números. Pon 0 si el precio es 'A Cotizar'."
+
+              - label: "Fotografías del Producto"
                 name: "fotos"
                 widget: "list"
                 label_singular: "Foto"
-                field: { label: "Imagen", name: "foto", widget: "image" }
-              - { label: "Descripción o Variantes de Precio", name: "desc", widget: "text", hint: "Puedes escribir detalles o la lista de precios por medida" }
+                hint: "Presiona para subir fotos desde tu computadora o celular."
+                field: 
+                  label: "Subir Imagen"
+                  name: "foto"
+                  widget: "image"
+
+              - label: "Detalles o Lista de Precios por Medida"
+                name: "desc"
+                widget: "text"
+                hint: "Escribe aquí la descripción o las medidas y costos especiales."

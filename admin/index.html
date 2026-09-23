@@ -4,29 +4,79 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Administrador | Alquiladora GM Padierna</title>
+    <title>Panel de Control | Alquiladora GM Padierna</title>
 
-    <!-- Script de Netlify Identity -->
+    <!-- Netlify Identity -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-    <!-- Personalización visual del panel -->
     <style>
-        /* Estilos del encabezado del panel */
+        /* Ocultar botones técnicos que puedan asustar o causar accidentes */
+        /* Oculta la vista dividida Markdown/Preview técnica innecesaria */
+        [class*="SplitPane"]>div:last-child {
+            display: none !important;
+        }
+
+        [class*="SplitPane"]>div:first-child {
+            width: 100% !important;
+        }
+
+        /* Estilizar la barra superior */
         [class*="AppHeaderContent"] {
             background-color: #1E3D9A !important;
         }
 
-        /* Botón de publicar/guardar destacado */
+        /* Resaltar el botón Guardar */
         button[class*="SaveButton"] {
             background-color: #10B981 !important;
+            font-size: 14px !important;
             font-weight: bold !important;
+            border-radius: 8px !important;
         }
     </style>
 </head>
 
 <body>
-    <!-- Decap CMS -->
+    <!-- Carga del CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+    <!-- Configuración de Idioma Español -->
+    <script>
+        CMS.registerLocale('es', {
+            auth: {
+                login: 'Iniciar Sesión',
+                loggingIn: 'Iniciando sesión...',
+                loginWithNetlifyIdentity: 'Entrar con correo y contraseña'
+            },
+            app: {
+                header: {
+                    quickAdd: 'Crear nuevo'
+                }
+            },
+            collection: {
+                collectionTop: {
+                    sortByLabel: 'Ordenar por',
+                    viewAs: 'Vista'
+                },
+                entries: {
+                    emptyCollection: 'No hay elementos registrados'
+                }
+            },
+            editor: {
+                editorControlPane: {
+                    widget: {
+                        list: {
+                            add: '+ Agregar nuevo producto'
+                        }
+                    }
+                },
+                editorToolbar: {
+                    publish: 'Guardar Cambios en la Web',
+                    publishing: 'Guardando...',
+                    published: 'Cambios Guardados'
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
