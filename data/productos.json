@@ -775,16 +775,6 @@
                 "/Mesa_California.jpeg"
             ],
             "desc": "Hola esta es una prueba "
-        },
-        {
-            "precio": 100,
-            "id": 69,
-            "nombre": "Inflable (3 x 4 m) Prueba",
-            "categoria": "Otros",
-            "fotos": [
-                "/Mesa_California.jpeg"
-            ],
-            "desc": "Hola esta es una prueba "
         }
     ]
 }
