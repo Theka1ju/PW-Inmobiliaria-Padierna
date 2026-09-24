@@ -772,8 +772,9 @@
       "nombre": "Inflable (3 x 4 m) Prueba",
       "categoria": "Otros",
       "fotos": [
-        "/tablon_vestida.jpg"
-      ]
+        "/Mesa_California.jpeg"
+      ],
+      "desc": "Hola esta es una prueba "
     }
   ]
 }
