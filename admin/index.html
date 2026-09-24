@@ -25,14 +25,34 @@
             width: 100% !important;
         }
 
-        /* Fuerza a que el contenedor de la imagen muestre fondo limpio y proporción */
-        [class*="StyledImage"],
-        img[role="presentation"] {
-            object-fit: contain !important;
-            background-color: #f8fafc !important;
-            border: 1px solid #e2e8f0;
+        /* Estilo para las imágenes recuperadas directamente */
+        .custom-img-card {
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 10px;
+            background: #ffffff;
+            margin: 6px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .custom-img-thumb {
+            width: 110px;
+            height: 80px;
+            object-fit: cover;
             border-radius: 6px;
-            min-height: 80px;
+            border: 1px solid #cbd5e1;
+            background: #f8fafc;
+        }
+        .custom-img-btn {
+            background: #ef4444;
+            color: #ffffff;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -56,22 +76,48 @@
             }
         });
 
-        // Observer que toma la ruta de la imagen y sustituye el blob vacío por la ruta estática
-        setInterval(() => {
-            const wrappers = document.querySelectorAll('img[src^="blob:"]');
-            wrappers.forEach(img => {
-                if (img.naturalWidth === 0) {
-                    const row = img.closest('[class*="ListItemControl"]') || img.closest('[class*="ControlContainer"]');
-                    if (row) {
-                        const rawText = row.innerText || '';
-                        const match = rawText.match(/img\/[a-zA-Z0-9_\-\.\(\)\s]+\.(?:jpeg|jpg|png|webp)/i);
-                        if (match) {
-                            img.src = '/' + match[0].replace(/^\/+/, '');
+        // Inyección directa sobre el DOM: toma la URL del estado React de Decap
+        function repararImagenes() {
+            const images = document.querySelectorAll('img[src^="blob:"]');
+            images.forEach(img => {
+                try {
+                    // Buscar la instancia interna de React
+                    const reactKey = Object.keys(img).find(k => k.startsWith('__reactFiber') || k.startsWith('__reactInternalInstance'));
+                    if (!reactKey) return;
+
+                    let fiber = img[reactKey];
+                    let rawPath = null;
+
+                    // Subir por el árbol de componentes para recuperar el prop value del widget de imagen
+                    while (fiber && !rawPath) {
+                        if (fiber.memoizedProps) {
+                            const props = fiber.memoizedProps;
+                            if (typeof props.value === 'string' && props.value.length > 0) {
+                                rawPath = props.value;
+                            } else if (props.entry && props.entry.get) {
+                                // En caso de estar en el nivel de entrada
+                            }
+                        }
+                        fiber = fiber.return;
+                    }
+
+                    if (rawPath) {
+                        const cleanUrl = rawPath.startsWith('/') ? rawPath : '/' + rawPath;
+                        if (img.getAttribute('data-fixed-src') !== cleanUrl) {
+                            img.src = cleanUrl;
+                            img.setAttribute('data-fixed-src', cleanUrl);
+                            img.style.objectFit = 'contain';
+                            img.style.backgroundColor = '#ffffff';
                         }
                     }
+                } catch (e) {
+                    console.error("Error resolviendo ruta de imagen:", e);
                 }
             });
-        }, 500);
+        }
+
+        // Ejecutar revisión periódica constante
+        setInterval(repararImagenes, 400);
     </script>
 </body>
 
