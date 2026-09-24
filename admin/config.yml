@@ -5,7 +5,7 @@ backend:
 locale: "es"
 
 media_folder: "img"
-public_folder: "/"
+public_folder: "/img"
 
 collections:
   - name: "catalogo"
@@ -40,5 +40,5 @@ collections:
                 name: "fotos"
                 widget: "list"
                 label_singular: "Foto"
-                field: { label: "Imagen", name: "foto_item", widget: "image" }
+                field: { label: "Imagen", name: "foto", widget: "image" }
               - { label: "Descripción o Medidas", name: "desc", widget: "text" }

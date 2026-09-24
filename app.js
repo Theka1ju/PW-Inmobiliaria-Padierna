@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 async function cargarProductos() {
     try {
-        // Enfoque recomendado: leer la lista completa generada o el listado de archivos
         const respuesta = await fetch("data/productos.json");
         if (!respuesta.ok) throw new Error(`HTTP ${respuesta.status}`);
         const data = await respuesta.json();
@@ -25,6 +24,7 @@ async function cargarProductos() {
         console.error("Error al cargar los productos:", error);
     }
 }
+
 function filtrarCategoria(categoria) {
     categoriaActual = categoria;
     document.querySelectorAll(".cat-btn").forEach(btn => {
@@ -37,6 +37,30 @@ function filtrarCategoria(categoria) {
     renderCatalog();
 }
 
+function resolverRutaFoto(ruta) {
+    if (!ruta) return 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=500&q=80';
+    
+    // Si viene como objeto por Decap CMS:
+    if (typeof ruta === 'object') {
+        ruta = ruta.foto || ruta.foto_item || Object.values(ruta)[0] || '';
+    }
+
+    // Si ya es una URL externa (http / https), respetarla
+    if (typeof ruta === 'string' && (ruta.startsWith('http://') || ruta.startsWith('https://'))) {
+        return ruta;
+    }
+
+    // Limpiar diagonales iniciales
+    let limpia = String(ruta).replace(/^\/+/, '');
+
+    // Si no contiene la carpeta 'img/', agregársela
+    if (!limpia.startsWith('img/')) {
+        limpia = 'img/' + limpia;
+    }
+
+    return limpia;
+}
+
 function renderCatalog() {
     const grid = document.getElementById("catalog-grid");
     if (!grid) return;
@@ -46,7 +70,8 @@ function renderCatalog() {
         : productos.filter(p => p.categoria === categoriaActual);
 
     grid.innerHTML = prodsFiltrados.map(prod => {
-        const fotoPrincipal = (prod.fotos && prod.fotos.length > 0 && prod.fotos[0] !== "img/") ? prod.fotos[0] : "img/placeholder.jpg";
+        const tieneFotos = prod.fotos && Array.isArray(prod.fotos) && prod.fotos.length > 0;
+        const fotoPrincipal = tieneFotos ? resolverRutaFoto(prod.fotos[0]) : "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=300&q=80";
 
         return `
       <div onclick="abrirDetalle(${prod.id})" class="rounded-xl shadow-xs border border-[#E3DDD1] overflow-hidden hover:shadow-md transition cursor-pointer flex flex-col justify-between group" style="background-color: #FAF8F5;">
@@ -90,23 +115,23 @@ function abrirDetalle(id) {
         descEl.innerHTML = `
             <div class="flex flex-col gap-1.5 text-xs max-h-64 overflow-y-auto pr-1">
                 ${lineas.map(linea => {
-            const partes = linea.split(" - ");
-            if (partes.length >= 3) {
-                const [nombre, medida, precio] = partes;
-                return `
-                    <div class="flex items-center justify-between p-2 rounded-lg bg-stone-100/80 border border-stone-200">
-                        <div class="text-left">
-                            <span class="font-bold text-stone-800">${nombre}</span>
-                            <span class="text-stone-500 font-medium ml-1">(${medida})</span>
-                        </div>
-                        <span class="font-extrabold ${precio.includes('cotizar') ? 'text-amber-700' : 'text-blue-950'} whitespace-nowrap ml-2">
-                            ${precio}
-                        </span>
-                    </div>
-                `;
-            }
-            return `<div class="p-1 text-stone-600">${linea}</div>`;
-        }).join('')}
+                    const partes = linea.split(" - ");
+                    if (partes.length >= 3) {
+                        const [nombre, medida, precio] = partes;
+                        return `
+                            <div class="flex items-center justify-between p-2 rounded-lg bg-stone-100/80 border border-stone-200">
+                                <div class="text-left">
+                                    <span class="font-bold text-stone-800">${nombre}</span>
+                                    <span class="text-stone-500 font-medium ml-1">(${medida})</span>
+                                </div>
+                                <span class="font-extrabold ${precio.includes('cotizar') ? 'text-amber-700' : 'text-blue-950'} whitespace-nowrap ml-2">
+                                    ${precio}
+                                </span>
+                            </div>
+                        `;
+                    }
+                    return `<div class="p-1 text-stone-600">${linea}</div>`;
+                }).join('')}
             </div>
         `;
     } else {
@@ -130,8 +155,11 @@ function cambiarFotoCarrusel(direccion) {
 }
 
 function actualizarFotoCarrusel() {
-    const fotosValidas = productoModalActual.fotos && productoModalActual.fotos.length > 0 && productoModalActual.fotos[0] !== "img/"
-        ? productoModalActual.fotos
+    const tieneFotos = productoModalActual && productoModalActual.fotos && Array.isArray(productoModalActual.fotos) && productoModalActual.fotos.length > 0;
+    
+    // Normalizar todas las fotos mediante resolverRutaFoto
+    const fotosValidas = tieneFotos
+        ? productoModalActual.fotos.map(f => resolverRutaFoto(f))
         : ["https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=500&q=80"];
 
     const imgEl = document.getElementById("carousel-img");
