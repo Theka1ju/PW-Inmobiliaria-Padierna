@@ -765,17 +765,6 @@
         "img/inflable3.jpg"
       ],
       "desc": "Juego inflable infantil de 3x4m incluye motor y montaje."
-    },
-    {
-      "precio": 100,
-      "id": 69,
-      "nombre": "Inflable (3 x 4 m) Prueba",
-      "categoria": "Otros",
-      "fotos": [
-        "/img/Mesa_California.jpeg",
-        "/img/Mesa_campirana_sola.jpeg"
-      ],
-      "desc": "Hola esta es una prueba "
     }
   ]
 }
