@@ -25,9 +25,12 @@
             width: 100% !important;
         }
 
-        /* Fuerza a que el contenedor de la imagen muestre el fondo blanco y borde */
-        [class*="StyledImage"] {
+        /* Estilo para que la imagen se vea limpia y centrada */
+        [class*="StyledImage"],
+        img[role="presentation"] {
+            object-fit: contain !important;
             background-color: #ffffff !important;
+            min-height: 80px;
         }
     </style>
 </head>
@@ -50,6 +53,28 @@
                 }
             }
         });
+
+        // Script para arreglar los blobs rotos de Git Gateway:
+        // Decap guarda en el input o en el estado el nombre del archivo (ej. img/carpa.jpeg).
+        // Si la imagen tiene un src que comienza con "blob:" pero no cargó ancho real (naturalWidth === 0),
+        // este script la redirige a su URL estática de Netlify.
+        setInterval(() => {
+            const images = document.querySelectorAll('img[src^="blob:"]');
+            images.forEach(img => {
+                if (img.naturalWidth === 0) {
+                    // Buscar el contenedor del control de la imagen
+                    const container = img.closest('[class*="ControlContainer"]') || img.closest('[class*="ListItemControl"]');
+                    if (container) {
+                        // Buscar inputs o botones con la ruta
+                        const textContent = container.innerText;
+                        const match = textContent.match(/img\/[^\s\n\r]+\.(?:jpg|jpeg|png|webp)/i);
+                        if (match) {
+                            img.src = '/' + match[0].replace(/^\/+/, '');
+                        }
+                    }
+                }
+            });
+        }, 500);
     </script>
 </body>
 
