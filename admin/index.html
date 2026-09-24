@@ -25,11 +25,13 @@
             width: 100% !important;
         }
 
-        /* Estilo para que la imagen se vea limpia y centrada */
+        /* Fuerza a que el contenedor de la imagen muestre fondo limpio y proporción */
         [class*="StyledImage"],
         img[role="presentation"] {
             object-fit: contain !important;
-            background-color: #ffffff !important;
+            background-color: #f8fafc !important;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
             min-height: 80px;
         }
     </style>
@@ -54,20 +56,15 @@
             }
         });
 
-        // Script para arreglar los blobs rotos de Git Gateway:
-        // Decap guarda en el input o en el estado el nombre del archivo (ej. img/carpa.jpeg).
-        // Si la imagen tiene un src que comienza con "blob:" pero no cargó ancho real (naturalWidth === 0),
-        // este script la redirige a su URL estática de Netlify.
+        // Observer que toma la ruta de la imagen y sustituye el blob vacío por la ruta estática
         setInterval(() => {
-            const images = document.querySelectorAll('img[src^="blob:"]');
-            images.forEach(img => {
+            const wrappers = document.querySelectorAll('img[src^="blob:"]');
+            wrappers.forEach(img => {
                 if (img.naturalWidth === 0) {
-                    // Buscar el contenedor del control de la imagen
-                    const container = img.closest('[class*="ControlContainer"]') || img.closest('[class*="ListItemControl"]');
-                    if (container) {
-                        // Buscar inputs o botones con la ruta
-                        const textContent = container.innerText;
-                        const match = textContent.match(/img\/[^\s\n\r]+\.(?:jpg|jpeg|png|webp)/i);
+                    const row = img.closest('[class*="ListItemControl"]') || img.closest('[class*="ControlContainer"]');
+                    if (row) {
+                        const rawText = row.innerText || '';
+                        const match = rawText.match(/img\/[a-zA-Z0-9_\-\.\(\)\s]+\.(?:jpeg|jpg|png|webp)/i);
                         if (match) {
                             img.src = '/' + match[0].replace(/^\/+/, '');
                         }
