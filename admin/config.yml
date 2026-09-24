@@ -4,10 +4,8 @@ backend:
 
 locale: "es"
 
-# Carpeta en la raíz de tu repositorio
 media_folder: "img"
-# Ruta pública absoluta desde la raíz web
-public_folder: "/img"
+public_folder: "/"
 
 collections:
   - name: "catalogo"
@@ -42,5 +40,5 @@ collections:
                 name: "fotos"
                 widget: "list"
                 label_singular: "Foto"
-                field: { label: "Imagen", name: "foto", widget: "image" }
+                field: { label: "Imagen", widget: "image" }
               - { label: "Descripción o Medidas", name: "desc", widget: "text" }
